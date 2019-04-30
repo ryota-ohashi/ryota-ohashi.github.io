@@ -1,0 +1,257 @@
+body {
+  background-color: #CCCCCC;
+}
+
+body .top {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  body .top {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  body .top {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  body .top {
+    height: 200px;
+  }
+}
+
+body .top .inside {
+  width: 70%;
+  float: center;
+}
+
+body .top .inside .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+body .top .inside .frame {
+  height: 80%;
+  width: 80%;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+body .top .inside .typist {
+  width: 70%;
+  font-size: 24px;
+}
+
+body .top .inside .black-box {
+  display: none;
+  width: 210px;
+  height: 260px;
+  background-color: black;
+}
+
+body .top .inside .name {
+  display: none;
+  width: 20%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body .top .inside .name {
+    width: 30%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body .top .inside .name {
+    width: 40%;
+    height: auto;
+  }
+}
+
+body .container {
+  width: 100%;
+}
+
+body .container .menu {
+  text-align: center;
+  width: 100%;
+  height: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #CCCCCC;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 1024px) {
+  body .container .menu {
+    height: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body .container .menu {
+    height: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+body .container .menu a {
+  float: center;
+  color: black;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 25px;
+}
+
+@media (max-width: 1024px) {
+  body .container .menu a {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  body .container .menu a {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+  }
+}
+
+body .container .contents {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body .container .contents .contents-text h3 {
+  font-size: 40px;
+}
+
+@media (max-width: 1024px) {
+  body .container .contents .contents-text h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  body .container .contents .contents-text h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  body .container .contents .contents-text h3 {
+    font-size: 20px;
+  }
+}
+
+body .container .contents .contents-text p {
+  font-size: 26px;
+}
+
+@media (max-width: 1024px) {
+  body .container .contents .contents-text p {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  body .container .contents .contents-text p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body .container .contents .contents-text p {
+    font-size: 12px;
+  }
+}
+
+body footer {
+  width: 100%;
+  height: 60px;
+  background-color: #CCCCCC;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body footer {
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+body footer a {
+  font-size: 12px;
+  color: black;
+  float: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 480px) {
+  body footer a {
+    font-size: 14px;
+  }
+}
+
+.frame::before,
+.frame::after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 2px solid transparent;
+}
+
+.frame::before {
+  top: -2px;
+  left: -2px;
+}
+
+.frame::after {
+  bottom: -2px;
+  right: -2px;
+}
+
+.addFrame::before,
+.addFrame::after {
+  width: 100%;
+  height: 100%;
+}
+
+.addFrame::before {
+  border-bottom-color: #06069b;
+  border-left-color: #06069b;
+  -webkit-transition: height .3s, width .3s .3s;
+  transition: height .3s, width .3s .3s;
+}
+
+.addFrame::after {
+  border-top-color: #06069b;
+  border-right-color: #06069b;
+  -webkit-transition: height .3s, width .3s .3s;
+  transition: height .3s, width .3s .3s;
+}
+/*# sourceMappingURL=style.css.map */
