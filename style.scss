@@ -1,0 +1,272 @@
+
+$pc: 1024px; // PC
+$tab: 768px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+body{
+    background-color: #CCCCCC;
+
+    .top{
+        width: 100%;
+        height: 600px;
+        position: relative;
+        @include pc {
+            height: 600px;
+          };
+          @include tab {
+            height: 350px;
+          };
+          @include sp {
+            height: 200px;
+          };
+
+        .inside{
+            // display:none;
+            width: 70%;
+            float: center;
+
+            .logo{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+
+            .frame{
+                height:80%;
+                width:80%;
+                // 枠線用
+                display: inline-block;
+                text-decoration: none;
+                outline: none;
+                transition: all .2s;
+            }
+
+            .typist{
+                width: 70%;
+                font-size: 24px;
+            }
+
+            .black-box{
+                display: none;
+                width: 210px;
+                height: 260px;
+                background-color: black;
+            }
+
+            .name{
+                display: none;
+                width:20%;
+                height:auto;
+
+                @include pc {
+            
+                };
+                @include tab {
+                    width: 30%;
+                    height: auto;
+                };
+                @include sp {
+                  width: 40%;
+                  height: auto;
+                };
+            }
+        }
+    }
+    .container{
+        width:100%;
+        
+        .menu{
+            text-align: center;
+            width:100%;
+            height:45px; 
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #CCCCCC;
+            position: sticky;
+            top: 0;
+
+            @include pc {
+                height:45px; 
+                padding-top: 10px;
+                padding-bottom: 10px;
+            };
+            @include tab {
+              
+            };
+            @include sp {
+                height:30px; 
+                padding-top: 3px;
+                padding-bottom: 3px;
+            };
+
+            a{
+                float:center;
+                color: black;
+                padding-left:35px;
+                padding-right: 35px;
+                font-size:25px;
+
+                @include pc {
+                    padding-left:35px;
+                    padding-right: 35px;
+                    font-size:25px;
+                };
+                @include tab {
+                  
+                };
+                @include sp {
+                    padding-left:15px;
+                    padding-right: 15px;
+                    font-size:12px;
+                };
+
+            }
+        }
+
+        .contents{
+            width: 80%;
+            margin: 0 auto;
+            // border:solid;
+            @include pc {
+            
+            };
+            @include tab {
+              
+            };
+            @include sp {
+              
+            };
+
+            .contents-text{
+                // width: 63%;
+                // padding: 20px;
+                // margin: 0 auto;
+
+                h3{
+                    font-size: 40px;
+
+                    @include pc {
+                        font-size: 40px;
+                    };
+                    @include tab {
+                        font-size: 30px;
+                    };
+                    @include sp {
+                        font-size: 20px;
+                    };
+                }
+
+                p{
+                    font-size: 26px;
+
+                    @include pc {
+                        font-size: 26px;
+                    };
+                    @include tab {
+                        font-size: 20px;
+                    };
+                    @include sp {
+                        font-size: 12px;
+                    };
+                }
+            }
+        }
+    }
+    footer{
+        width:100%;
+        height:60px;
+        background-color: #CCCCCC;
+        text-align: center;
+
+        @include pc {
+            
+        };
+        @include tab {
+          
+        };
+        @include sp {
+            font-size: 12px;
+            padding-left: 15px;
+            padding-right: 15px;
+        };
+
+        a{
+            font-size: 12px;
+            color: black;
+            float: center;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            @include pc {
+            
+            };
+            @include tab {
+              
+            };
+            @include sp {
+                font-size: 14px;
+            };
+        }
+    }
+}
+
+@include pc {
+            
+};
+@include tab {
+  
+};
+@include sp {
+  
+};
+
+  .frame::before,
+  .frame::after {
+    position: absolute;
+    z-index: 2;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+  }
+  .frame::before {
+    top: -2px;
+    left: -2px;
+  }
+  .frame::after {
+    bottom: -2px;
+    right: -2px;
+  }
+  
+  .addFrame::before,
+  .addFrame::after {
+    width: 100%;
+    height: 100%;
+  }
+  .addFrame::before {
+    border-bottom-color: rgb(6, 6, 155);
+    border-left-color: rgb(6, 6, 155);
+    transition: height .3s, width .3s .3s;
+  }
+  .addFrame::after {
+    border-top-color: rgb(6, 6, 155);
+    border-right-color: rgb(6, 6, 155);
+    transition: height .3s, width .3s .3s;
+  }
