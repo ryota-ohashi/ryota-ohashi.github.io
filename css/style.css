@@ -23,12 +23,17 @@ body {
   font-family: impact, "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-.button {
-  display: block;
+.button-frame {
+  width: 100%;
   position: absolute;
   bottom: 15%;
-  left: 40%;
-  width: 20%;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 50px;
   color: #f1f1f1;
   font-size: 28px;
   font-family: impact, "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
@@ -38,12 +43,6 @@ body {
   background-color: grey;
   opacity: 0.8;
   cursor: pointer;
-}
-
-@media (max-width: 480px) {
-  .button {
-    width: 50%;
-  }
 }
 
 .button:hover {
