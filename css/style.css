@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 body {
   margin: 0;
 }
@@ -79,40 +78,16 @@ body {
   }
 }
 
-.header .japanese {
-  font-size: 2.8rem;
-  letter-spacing: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header .japanese .word {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.header .japanese .word1 {
-  position: relative;
-  top: 50px;
-  padding-left: 50px;
-}
-
 .header .title {
+  position: relative;
+  top: 30px;
   padding-left: 30px;
-  font-size: 10rem;
-  letter-spacing: 1.5px;
-  font-family: 'Arial','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Avenir','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-  opacity: 0.9;
 }
 
-.header .sub-title {
-  position: relative;
-  bottom: 110px;
-  padding-left: 130px;
-  font-size: 7rem;
-  letter-spacing: 5px;
-  color: grey;
+@media (max-width: 480px) {
+  .header .title {
+    zoom: 80%;
+  }
 }
 
 .about, .skill, .work, .contact {
