@@ -1,0 +1,153 @@
+@charset "UTF-8";
+.canvas-page {
+  overflow: hidden;
+}
+
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.typing {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  color: #585858;
+  font-family: impact, "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.button {
+  display: block;
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+  width: 20%;
+  color: #f1f1f1;
+  font-size: 28px;
+  font-family: impact, "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  line-height: 1.2;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: grey;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 50%;
+  }
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.portfolio-section {
+  background: #001a24;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 300px;
+  color: white;
+  background-color: #001a24;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    zoom: 60%;
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    zoom: 40%;
+  }
+}
+
+.header .japanese {
+  font-size: 2.8rem;
+  letter-spacing: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .japanese .word {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.header .japanese .word1 {
+  position: relative;
+  top: 50px;
+  padding-left: 50px;
+}
+
+.header .title {
+  padding-left: 30px;
+  font-size: 10rem;
+  letter-spacing: 1.5px;
+  font-family: 'Arial','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Avenir','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  opacity: 0.9;
+}
+
+.header .sub-title {
+  position: relative;
+  bottom: 110px;
+  padding-left: 130px;
+  font-size: 7rem;
+  letter-spacing: 5px;
+  color: grey;
+}
+
+.about, .skill, .work, .contact {
+  width: 100vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #001a24;
+  color: white;
+  overflow: hidden;
+}
+
+.about .about-title, .skill .about-title, .work .about-title, .contact .about-title, .skill .skill-title, .work .work-title, .contact .contact-title {
+  font-size: 42px;
+  letter-spacing: 1px;
+  padding: 10px 10%;
+  font-family: 'Arial','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Avenir','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+@media (max-width: 480px) {
+  .about .about-title, .skill .about-title, .work .about-title, .contact .about-title, .skill .skill-title, .work .work-title, .contact .contact-title {
+    font-size: 32px;
+  }
+}
+
+.about .about-text, .skill .about-text, .work .about-text, .contact .about-text, .skill .skill-text, .work .work-text, .contact .contact-text {
+  width: 500px;
+  padding: 10px 10%;
+  font-size: 24px;
+  font-family: 'Arial','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Avenir','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+@media (max-width: 680px) {
+  .about .about-text, .skill .about-text, .work .about-text, .contact .about-text, .skill .skill-text, .work .work-text, .contact .contact-text {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .about-text, .skill .about-text, .work .about-text, .contact .about-text, .skill .skill-text, .work .work-text, .contact .contact-text {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
