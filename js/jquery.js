@@ -1,5 +1,10 @@
 $(function(){
 
+    // ローディングバー
+    Pace.on('done', function(){
+        $('.wrap').fadeIn();
+    });
+
     // t.jsの速度調整
     $('#target').t({
         speed:50,
