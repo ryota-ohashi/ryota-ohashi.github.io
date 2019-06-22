@@ -1,11 +1,9 @@
 "# ryota-ohashi.github.io" 
 
+【ポートフォリオページ：index.html, inside.html, style.scss】
 HTML5, CSS3, jQuery, JavaScript, Three.jsを用いて制作。
-ローディング画面はPACE.jsを用いて制作。index.htmlをThree.jsを用いて制作。
+ローディング画面はPACE.jsを用いて制作。
 人間とはブラックボックスである。ということをテーマにThree.jsで黒い立方体を作製し、ポートフォリオはその中身というコンセプトです。
 
-(余談)
-
-ちなみにWhat I see in the black box is... の先は "私"が答えです。What I see(私)という感じで「ブラックボックスの中で私が見たのは　＝　ブラックボックスの中の私」という二重構造なのでした。そしてページ遷移後にプロフィールへ。
-
-こうした比較的派手な動きを付ける場合、そこには明確なコンセプトがある方が良いのだなと作っていて感じました。
+【短歌magazine：magazine.html, tanka.css】
+magazine.htmlでは架空のメディアとして「短歌magazine」を制作。レスポンシブ対応済み。スマホ表示時のハンバーガーメニューはjqueryを用いて動きのあるものにしています。
