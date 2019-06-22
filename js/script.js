@@ -1,18 +1,17 @@
-// ボタンをクリックしたらボタンが消える
-const button = document.querySelector('.button');
+window.addEventListener('DOMContentLoaded', function(){
+  // Javascriptで書いてみる
+  // opacityでフェード
+  document.getElementById('portfolio-section').style.opacity = '1';
 
-button.addEventListener('click', change);
-function change() {
-    button.style.display = 'none';
-}
+  // jqueryで書いてみる
+  // スムーズズクロール
+  $('a[href^="#"]').click(function(){
+    var speed = 400;
+    var href = $(this).attr("href");
+    var tar = $(href == "#" || href == "" ? 'html' : href);
+    var pos = tar.offset().top;
 
-window.addEventListener('DOMContentLoaded', function() {
-    var swiper = new Swiper('.swiper-container', {
-      navigation: {nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'},
-      loop: true,
-      speed: 1000,
-      autoplay: 3000,
-      spaceBetween: 10,
-      effect: 'coverflow'
-    });
-  }, false);
+    $('html, body').animate({scrollTop: pos}, speed, 'swing');
+    return false;
+});
+});

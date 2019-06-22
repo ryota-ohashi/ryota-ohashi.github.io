@@ -4,44 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">  
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <title>R's portfolio</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>  
+    <title>In the black box</title>
 </head>
 <body>
-    <section class="portfolio-section">
-        <div class="header">
+    <section class="portfolio-section" id="portfolio-section">
+        <div class="header" id="inside-header">
+            <nav class="gnav">
+                <ul>
+                    <li class="list-item"><a href="#about">ABOUT</a></li>
+                    <li class="list-item"><a href="#skill">SKILL</a></li>
+                    <li class="list-item"><a href="#works">WORKS</a></li>
+                    <li class="list-item"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
             <div class="header-wrap">
-                <img class="logo" src="logo.svg" alt="ロゴ">
+                <img class="logo" src="images/logo.svg" alt="ロゴ">
                 <p class="name">RYOTA OHASHI</p>
             </div>
         </div>
-        <div class="about">
-            <h1 class="about-title">ABOUT ME</h1>
-            <p class="about-text">
-                1996年生まれ。埼玉大学大学院理工学研究科在籍の修士1年。21年卒予定。
-                <br>インタラクティブなwebサイト制作が出来るようになることを目指しています。新しい表現に挑戦しているようなweb制作会社を志望。JavaScriptに注力中。
-                <br>趣味は文学全般で、小説、詩、短歌、人文書等を読みます。私個人としては短歌を。ピアノやチェロを聴くことも好き。
-            </p>
+        <div class="p-text">
+            <div class="about" id="about">
+                <h1 class="about-title">ABOUT ME</h1>
+                <p class="about-text">
+                    1996年生まれ。埼玉大学大学院理工学研究科在籍の修士1年。21年卒予定。
+                    <br>インタラクティブなwebサイト制作が出来るようになることを目指しています。また、アルバイト或いは長期インターンが可能なweb制作会社様を探しています。
+                    <br>Three.jsを始めjavascriptのライブラリは面白いものが多く、駆使できるように注力中。
+                    <br>趣味は文学全般で、小説、詩、短歌、人文書等を。割と本気の趣味としては短歌を詠みます。ピアノやチェロを聴くことも好き。
+                </p>
+            </div>
+            <div class="skill" id="skill">
+                <h1 class="skill-title">SKILL</h1>
+                <p class="skill-text">
+                    使用経験のあるもの<br>
+                    HTML5/CSS3/Sass(scss)/Bootstrap4/jQuery/Javascript/Three.js
+                </p>
+            </div>
+            <div class="works" id="works">
+                <h1 class="work-title">WORK</h1>
+                <p class="work-text">実務経験はまだありませんので、いくつかの自作物を紹介します。</p>
+                <ul>
+                    <li class="work-item">
+                        <a href="index.html"><img src="images/portfolio_top.png" alt="ポートフォリオページ"></a>
+                        <p class="work-item-text">本サイト<br>HTML5/CSS3/jQuery/Three.jsを用いて制作。<br>レスポンシブ対応済み。</p>
+                    </li>
+                    <li class="work-item">
+                        <a href="magazine.html"><img src="images/tankamagazine.png" alt="短歌マガジンのサイト"></a>
+                        <p class="work-item-text">メディア風サイト(画像クリックで遷移)<br>HTML5/CSS3/jQueryを用いて制作。<br>レスポンシブ対応済み。</p>
+                    </li>
+                    <li class="work-item">
+                        <a href=""><img src="images/copyisara.png" alt="イサラのウェブページ"></a>
+                        <p class="work-item-text">isara.life模写制作LP 元サイト：<a href="https://isara.life/">https://isara.life/</a><br>HTML5/CSS3/jQueryを用いて制作。<br>レスポンシブ対応済み。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact" id="contact">
+                <h1 class="contact-title">CONTACT</h1>
+                <p class="contact-text">
+                    email:ryota.812.skt@gmail.com<br>
+                    wantedly:<a href="https://www.wantedly.com/users/103712321">https://www.wantedly.com/users/103712321</a></p>
+            </div>
         </div>
-        <div class="skill">
-            <h1 class="skill-title">SKILL</h1>
-            <p class="skill-text">
-                使用経験のあるもの<br>
-                ・HTML5 ・CSS3 ・Sass(scss) ・Bootstrap4 ・jQuery ・Javascript ・Three.js
-            </p>
-        </div>
-        <div class="work">
-            <h1 class="work-title">WORK</h1>
-            <p class="work-text">実務経験はまだありませんので、いくつかの自作物を紹介します。</p>
-        </div>
-        <div class="contact">
-            <h1 class="contact-title">CONTACT</h1>
-            <p class="contact-text">email:ryota.812.skt@gmail.com</p>
-        </div>
+        <footer class="footer">
+            <p>copyright 2019 ryota ohashi</p>
+            <p><a href="#portfolio-section" class="pagetop"><i class="fas fa-angle-up"></i></a></p>
+        </footer>
     </section>
-<script src="js/script.js"></script>
-<script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

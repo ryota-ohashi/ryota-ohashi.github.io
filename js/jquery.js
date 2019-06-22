@@ -11,10 +11,15 @@ $(function(){
         // speed_vary:true,
     });
 
-    // ボタンがクリックされてから少しおいて遷移
-    $("#button").click(function() {
+    // ボタンがクリックされてから少しおいてフェードアウト
+    $('#button').click(function() {
+
+        $('#button').fadeOut();
+
         setTimeout(function(){
-            window.location.href = 'inside.html';
-          }, 4000);
-      });
+            $('#canvas, #target').fadeOut(function(){
+                window.location.href = 'inside.html'; 
+            });
+        }, 2000);
+    });    
 });

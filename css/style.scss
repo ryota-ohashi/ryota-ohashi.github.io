@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+// メディアクエリ用
 $pc: 1024px; // PC
 $tab: 768px; // タブレット
 $sp: 480px;  // スマホ
@@ -19,13 +20,16 @@ $sp: 480px;  // スマホ
     @content;
   }
 }
+@mixin font(){
+    font-family: 'Arial','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Avenir','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
 
 body {
     margin: 0;
     // box-sizing: border-box;
 }
 
-// トップページ用
+// indexページ用
 .canvas-page{
     overflow: hidden;
 }
@@ -36,38 +40,41 @@ body {
 }
 .typing {
     position: absolute;
-    top: 20%;
+    top: 15%;
     width: 100%;
     text-align: center;
     font-size: 28px;
     color: rgb(20, 20, 20);
-    font-family: impact, "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    @include font();
 }
 .button-frame {
     width: 100%;
     position: absolute;
     bottom: 15%;
     text-align: center;
-}
-.button {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0 50px;
-    color: rgb(20, 20, 20);
-    font-size: 28px;
-    font-family: impact, "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    line-height: 1.2;
-    border: 1px solid rgb(20, 20, 20);
-    border-radius: 5px;
-    background-color: white;
-    opacity: 1;
-    cursor: pointer;
 
-    &:hover {
-        opacity: 0.6;
+    .button {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 50px;
+        color: rgb(20, 20, 20);
+        font-size: 16px;
+        line-height: 3;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid black;
+        border-radius: 24px;
+        opacity: 1;
+        cursor: pointer;
+        @include font();
+    
+        &:hover {
+            color: white;
+            background-color: black;
+        }
     }
 }
-// ここまでがトップページ
+
+// ここまでがindexページ
 
 // ローディングバー用
 .pace-running .wrap {
@@ -278,12 +285,14 @@ body {
   }
   
 
-// ここから詳細ページ
+// ここからinsideページ
 .portfolio-section {
     background: #ffffff;
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
+    opacity: 0;
+    transition: all 3s;
 }
 .header {
     position: relative;
@@ -291,6 +300,57 @@ body {
     height: 100vh;
     color: white;
     overflow: hidden;
+
+    .gnav {
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 10%;
+
+            @include tab {
+                justify-content: center;
+                padding-right: 0;
+            }
+
+            .list-item {
+                font-size: 12px;
+                letter-spacing: 1px;
+                padding: 50px 20px 0;
+
+                @include tab {
+                    padding: 30px 10px 0;
+                }
+
+                a {
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: black;
+                    @include font();
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        bottom: -4px;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: rgb(56, 56, 56);
+                        transform: scale(0, 1);
+                        transform-origin: left top;
+                        transition: transform .1s;                        
+                    }
+
+                    &:hover::after {
+                        transform: scale(1, 1);
+                    }
+
+                }
+            }
+        }
+    }
 
     .header-wrap {
         display: inline-block;
@@ -316,17 +376,22 @@ body {
         }
     
         .name {
+            padding-top: 30px;
             font-size: 24px;
             letter-spacing: 2px;
+            @include font();
         }
     }
     
 }
-.about {
+.p-text {
     width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+}
+.about {
     padding-top: 50px;
     padding-bottom: 50px;
-    // background-color: rgb(0, 26, 36);
     color: black;
     text-align: center;
     overflow: hidden;
@@ -340,14 +405,14 @@ body {
         padding-bottom: 10px;
     }
     .about-title {
-        font-size: 32px;
+        font-size: 24px;
         letter-spacing: 1px;
         padding: 10px 10%;
         margin: 0;
-        font-family: 'Arial','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Avenir','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+        @include font();
 
         @include tab {
-            font-size: 28px;
+            font-size: 20px;
         }
     }
 
@@ -356,9 +421,10 @@ body {
         text-align: left;
         width: 500px;
         padding: 10px;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 2;
         letter-spacing: 1px;
+        word-wrap: break-word;
         font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
 
         @include tab {
@@ -382,7 +448,7 @@ body {
         @extend .about-text;
     }
 }
-.work {
+.works {
     @extend .about;
 
     .work-title {
@@ -392,9 +458,36 @@ body {
     .work-text {
         @extend .about-text;
     }
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding-top: 50px;
+
+        @include pc {
+            flex-direction: column;
+        }
+
+        .work-item {
+            padding: 1px 0 30px;
+
+            .work-item-text {
+                font-size: 12px;
+                font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+            }
+
+            a {
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+
+        }
+    }
 }
 .contact {
     @extend .about;
+    padding-bottom: 50px;
 
     .contact-title {
         @extend .about-title;
@@ -402,6 +495,30 @@ body {
 
     .contact-text {
         @extend .about-text;
-        text-align: center;
+    }
+}
+
+.footer {
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    line-height: 3;
+    letter-spacing: 1px;
+    border-top: 1px solid rgb(228, 228, 228);
+
+    .pagetop {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        width: 30px;
+        height: 30px;
+        color: black;
+        font-size: 20px;
+        line-height: 1.5;
+        border: 1px solid rgb(200, 200, 200);
+
+        @include sp {
+            right: 20px;
+        }
     }
 }
