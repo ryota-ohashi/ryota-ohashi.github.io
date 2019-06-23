@@ -5,6 +5,7 @@ html {
 }
 body {
     width: 100%;
+    margin: 0;
     color: #333;
     font-size: 1.2rem;
     font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-selif;
@@ -163,8 +164,6 @@ a:link, a:visited, a:hover, a:active {
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 1.0rem;
-    /* position: relative;
-    bottom: 5px; */
 }
 .scroll-list .category {
     display: inline-block;
@@ -259,7 +258,7 @@ a:link, a:visited, a:hover, a:active {
     margin-top: 15px;
 }
 .ranking .ranking-item a {
-    display: block;
+    display: flex;
     font-size: 0;
     transition: opacity 0.15s;
 }
@@ -282,10 +281,9 @@ a:link, a:visited, a:hover, a:active {
     display: inline-block;
     width: 18px;
     height: 18px;
-    margin: 0 10px;
+    margin: 15px 10px;
     border: 1px solid #ccc;
     color: #aaa;
-    vertical-align: 25px;
     text-align: center;
     font-weight: bold;
     line-height: 16px;
@@ -657,9 +655,6 @@ a:link, a:visited, a:hover, a:active {
     .hot-topic .image {
         width: 100px;
     }
-    /* .hot-topic .content {
-        width: 50%;
-    } */
     .hot-topic .content .title {
         font-size: 12px;
     }
@@ -670,8 +665,8 @@ a:link, a:visited, a:hover, a:active {
     .ranking .text {
         width: 70%;
     }
-    .ranking .order {
+    /* .ranking .order {
         margin: 0 15px;
-    }
+    } */
     
 }

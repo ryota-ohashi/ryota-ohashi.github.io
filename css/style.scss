@@ -46,6 +46,10 @@ body {
     font-size: 28px;
     color: rgb(20, 20, 20);
     @include font();
+
+    @include sp {
+        top: 10%;
+    }
 }
 .button-frame {
     width: 100%;
@@ -289,7 +293,6 @@ body {
 .portfolio-section {
     background: #ffffff;
     margin: 0;
-    box-sizing: border-box;
     overflow: hidden;
     opacity: 0;
     transition: all 3s;
@@ -310,7 +313,7 @@ body {
             padding-right: 10%;
 
             @include tab {
-                justify-content: center;
+                justify-content: space-around;
                 padding-right: 0;
             }
 
@@ -386,8 +389,6 @@ body {
 }
 .p-text {
     width: 100%;
-    // display: flex;
-    // justify-content: space-between;
 }
 .about {
     padding-top: 50px;
@@ -473,6 +474,8 @@ body {
 
             .work-item-text {
                 font-size: 12px;
+                letter-spacing: 1px;
+                line-height: 2;
                 font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
             }
 
