@@ -28,7 +28,7 @@ window.addEventListener('load', init);
     const geometry = new THREE.BoxBufferGeometry(50, 50, 50);
     const material = new THREE.MeshStandardMaterial({color: 0x000000});
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 800; i++) {
       const mesh = new THREE.Mesh(geometry, material);
       mesh.position.x = (Math.random() - 0.5) * 2000;
       mesh.position.y = (Math.random() - 0.5) * 2000;
@@ -68,7 +68,7 @@ window.addEventListener('load', init);
       requestAnimationFrame(tick);
     }
 
-    // クリックしたら周りの黒箱を降下するための変更
+    // クリックしたら周りの黒箱を降下するための変更(スマートではない)
     const button = document.querySelector('.button');
 
     button.addEventListener('click', down);
