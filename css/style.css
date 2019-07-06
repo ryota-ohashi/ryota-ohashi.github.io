@@ -745,18 +745,55 @@ body {
 }
 
 .works ul .work-item {
-  padding: 1px 0 30px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.works ul .work-item a {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+}
+
+.works ul .work-item .wi1 {
+  background-image: url(../images/portfolio_top.png);
+}
+
+.works ul .work-item .wi2 {
+  background-image: url(../images/tanka_magazine.png);
+}
+
+.works ul .work-item .wi3 {
+  background-image: url(../images/isara.png);
+}
+
+.works ul .work-item .wi4 {
+  background-image: url(../images/xxxcorporate.png);
 }
 
 .works ul .work-item .work-item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  padding-top: 100px;
   font-size: 12px;
+  text-align: center;
+  color: white;
   letter-spacing: 1px;
   line-height: 2;
   font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.works ul .work-item a:hover {
-  opacity: 0.6;
+.works ul .work-item .work-item-text:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .contact {
