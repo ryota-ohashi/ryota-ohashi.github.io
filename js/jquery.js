@@ -1,6 +1,6 @@
 $(function () {
 
-	// ローディングバー
+	// ローディングバー用
 	Pace.on('done', function () {
 		$('.wrap').fadeIn();
 	});
