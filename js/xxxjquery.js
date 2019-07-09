@@ -1,5 +1,5 @@
 $(function(){
-
+//     スクロール量によりフェード
     $(window).scroll(function (){
         $('.information').each(function(){
             var isPos = $(this).offset().top,
@@ -12,7 +12,7 @@ $(function(){
             }
         });
     });
-
+//     ナビバー用
     $('#sp-gnav').click(function(){
         $('.header-inner').toggleClass('open');
     });
