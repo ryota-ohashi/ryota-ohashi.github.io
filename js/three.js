@@ -56,10 +56,6 @@ window.addEventListener('load', init);
       box1.rotation.x += 0.01;
 
         if(camera.position.y == 1){
-          // camera.position.z -= 5;
-          // box1.scale.x += 0.02;
-          // box1.scale.y += 0.02;
-          // box1.scale.z += 0.02;
           group.position.y -= 15;
         }
 
