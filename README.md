@@ -4,7 +4,7 @@
 <a href="https://ryota-ohashi.github.io/">https://ryota-ohashi.github.io/</a>
 
 <h2>WordPressサイト</h2>
-<a href="whitethings.wp.xdomain.jp">White Things</a>
+<a href="http://whitethings.wp.xdomain.jp">White Things</a>
 <p>ゼロからテーマを作成し、メディアサイトを構築しました。FileZillaを試してみたかったので、試しのXFREEサーバーで公開しています。</p>
 
 <h2>ポートフォリオページ</h2>
