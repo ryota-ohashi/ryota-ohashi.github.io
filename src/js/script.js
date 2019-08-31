@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function(){
   // opacityでフェードイン
-  document.getElementById('portfolio-section').style.opacity = '1';
+  document.getElementById('portfolio').style.opacity = '1';
 
   // スムーズズクロール
   $('a[href^="#"]').click(function(){

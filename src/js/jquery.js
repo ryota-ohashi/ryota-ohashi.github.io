@@ -18,7 +18,7 @@ $(function () {
 
 		setTimeout(function () {
 			$('#canvas, #target').fadeOut(function () {
-				window.location.href = 'inside.html';
+				window.location.href = 'profile.html';
 			});
 		}, 2000);
 	});

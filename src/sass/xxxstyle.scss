@@ -56,6 +56,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
         height: 100vh;
         background-color: rgb(100, 100, 100);
         z-index: 99;
+        overflow-y: scroll;
         transform: scale(0, 1);
         transform-origin: right;
         transition: visibility 0.5s ease, transform 0.5s ease;
