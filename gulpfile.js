@@ -81,7 +81,7 @@ function watchFiles(done) {
   };
   gulp.watch('src/sass').on('change', gulp.series(sassCom, browserReload));
   gulp.watch('src/js').on('change', gulp.series(jsCom, browserReload));
-  // gulp.watch('src/images').on('change', gulp.series(imgmin, browserReload));
+  gulp.watch('src/images').on('change', gulp.series(imgmin, browserReload));
   gulp.watch('*.html').on('change', gulp.series(browserReload));
 }
 
