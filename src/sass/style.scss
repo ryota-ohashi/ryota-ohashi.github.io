@@ -351,7 +351,10 @@ a {
         transition: .3s;
 
         @include tab {
-          height: 140px;
+          height: 300px;
+        }
+        @include sp {
+          height: 200px;
         }
       }
       
@@ -363,6 +366,10 @@ a {
         z-index: 99;
         @include Engfont();
         transform: translateY(20px);
+
+        @include sp {
+          padding-top: 90px;
+        }
       }
 
       &::after {
@@ -418,14 +425,20 @@ a {
   }
 }
 
-.contact {
+.contact-text {
+  white-space: nowrap;
   padding-bottom: 50px;
+
+  @include sp {
+    white-space: initial;
+  }
 }
 
 .footer {
   position: relative;
   text-align: center;
   font-size: 12px;
+  margin-top: 50px;
   line-height: 3;
   letter-spacing: 1px;
   border-top: 1px solid rgb(228, 228, 228);
