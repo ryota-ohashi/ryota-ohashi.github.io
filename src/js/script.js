@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function(){
   // opacityでフェードイン
   document.getElementById('portfolio').style.opacity = '1';
 
-  // スムーズズクロール
+  // スムーズスクロール
   $('a[href^="#"]').click(function(){
     var speed = 400;
     var href = $(this).attr("href");

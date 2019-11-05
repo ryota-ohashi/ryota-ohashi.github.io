@@ -10,40 +10,51 @@ window.addEventListener('load', init);
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0xffffff, 1.0);
+
     // シーンを作成
     const scene = new THREE.Scene();
+
     // フォグを設定
     scene.fog = new THREE.Fog(0xffffff, 50, 2000);
+
     // カメラを作成
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight);
     camera.position.set(0, 0, 1000);
-    // メインの箱
+
+    let rot = 0; // 角度
+    let mouseX = 0; // マウス座標
+
+    // マウス座標はマウスが動いた時のみ取得できる
+    document.addEventListener("mousemove", (event) => {
+      mouseX = event.pageX;
+    });
+    
+    // 真ん中の箱
     const geometry1 = new THREE.BoxGeometry(200, 200, 200);
     const material1 = new THREE.MeshBasicMaterial({color: 0x000000, fog: false});
-    const box1 = new THREE.Mesh(geometry1, material1);
-    scene.add(box1);
-    // グループを作成
-    const group = new THREE.Group();
-    scene.add(group);
-    const geometry = new THREE.BoxBufferGeometry(50, 50, 50);
-    const material = new THREE.MeshStandardMaterial({color: 0x000000});
-
+    const center_box = new THREE.Mesh(geometry1, material1);
+    scene.add(center_box);
+    
+    // 空のジオメトリーを作成
+    const geometry = new THREE.Geometry();
+    
     for (let i = 0; i < 800; i++) {
-      const mesh = new THREE.Mesh(geometry, material);
-      mesh.position.x = (Math.random() - 0.5) * 2000;
-      mesh.position.y = (Math.random() - 0.5) * 2000;
-      mesh.position.z = (Math.random() - 0.5) * 2000;
-      mesh.rotation.x = Math.random() * 2 * Math.PI;
-      mesh.rotation.y = Math.random() * 2 * Math.PI;
-      mesh.rotation.z = Math.random() * 2 * Math.PI;
-
-      // THREE.GeometryUtils.merge(geometry, mesh);
-      // グループに格納する
-      group.add(mesh);
+      const meshTemp = new THREE.Mesh(new THREE.BoxGeometry(50, 50, 50));
+      meshTemp.position.x = (Math.random() - 0.5) * 2000;
+      meshTemp.position.y = (Math.random() - 0.5) * 2000;
+      meshTemp.position.z = (Math.random() - 0.5) * 2000;
+      meshTemp.rotation.x = Math.random() * 2 * Math.PI;
+      meshTemp.rotation.y = Math.random() * 2 * Math.PI;
+      meshTemp.rotation.z = Math.random() * 2 * Math.PI;
+      
+      // メッシュの結合
+      geometry.mergeMesh(meshTemp);
     }
-    // 軸表示用
-    // axisHelper = new THREE.AxisHelper(1000);
-    // scene.add(axisHelper);
+    
+    const material = new THREE.MeshStandardMaterial({color: 0x000000});
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
     // 光源
     scene.add(new THREE.DirectionalLight(0xffffff, 2)); // 平行光源
     scene.add(new THREE.AmbientLight(0xffffff)); // 環境光源
@@ -56,20 +67,34 @@ window.addEventListener('load', init);
       down = true;
     });
 
-    // 毎フレーム時に実行されるループイベントです
+    // 毎フレーム時に実行されるループイベント
     tick();
     function tick() {
-      // グループを回す
-      group.rotateY(0.002);
-      box1.rotation.y += 0.01;
-      box1.rotation.x += 0.01;
+      // 回す
+      mesh.rotateY(0.002);
+      center_box.rotation.y += 0.01;
+      center_box.rotation.x += 0.01;
+
+      const targetRot = (mouseX / window.innerWidth) * 360;
+      // イージングの公式を用いて滑らかにする
+      // 値 += (目標値 - 現在の値) * 減速値
+      rot += (targetRot - rot) * 0.005;
+
+      // ラジアンに変換する
+      const radian = rot * Math.PI / 180;
+      // 角度に応じてカメラの位置を設定
+      camera.position.x = 1000 * Math.sin(radian);
+      // camera.position.y = 500 * Math.sin(radian);
+      camera.position.z = 1000 * Math.cos(radian);
+      // 原点方向を見つめる
+      camera.lookAt(new THREE.Vector3(0, 0, 0));
 
         if(down){
-          group.position.y -= 15;
+          mesh.position.y -= 15;
         }
 
       renderer.render(scene, camera); // レンダリング
-      // renderer.render(scene1, camera);
+
       requestAnimationFrame(tick);
     }
 
