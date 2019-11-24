@@ -1,13 +1,13 @@
-<h2>制作に使用した言語やライブラリ、ツール</h2>
-<p>HTML5, CSS3, Sass(scss), JavaScript, jQuery, Three.js, WordPress, gulp</p>
-<p>実際のポートフォリオサイトはこちら↓</p>
-<a href="https://ryota-ohashi.github.io/">https://ryota-ohashi.github.io/</a>
+<h2>これまでに使用した言語やライブラリ、ツール</h2>
+<p>HTML5, CSS3, Sass(scss), JavaScript, jQuery, WordPress, gulp, Three.js, Barba.js, Pace.js</p>
+<p>ポートフォリオサイトは<a href="https://ryota-ohashi.github.io/">こちら</a></p>
 
 <h2>WordPressサイト(19年8月制作)</h2>
 <a href="http://whitethings.wp.xdomain.jp">White Things</a>
 <p>ゼロからテーマを作成し、メディアサイトを構築しました。FileZillaを試してみたかったので、試しのXFREEサーバーで公開しています。</p>
 
 <h2>コーポレートサイト模写(19年7月制作)</h2>
+<a href="https://ryota-ohashi.github.io/xxxcorporate.html">クリックで飛べます。</a>
 <p>HTML5, CSS3, jQuery, Barba.jsを用いて制作。</p>
 <p>Barba.jsを試してみたくなり、二ページのみ作成しました。<br>模写元は奥村設計事務所様のコーポレートサイトで、スクロールによるフェードインや処々のホバー等を参考にさせて頂きました。</p>
 
@@ -16,6 +16,7 @@
 <p>人間とはブラックボックスである。ということをテーマにThree.jsで黒い立方体を作製し、ポートフォリオはその中身というコンセプトで、ロゴは展開図になっています。</p>
 
 <h2>短歌magazine(19年5月制作)</h2>
+<a href="https://ryota-ohashi.github.io/magazine.html">クリックで飛べます。</a>
 <p>架空のメディアとして「短歌magazine」のtopページを制作。レスポンシブ対応済み。スマホ表示時のハンバーガーメニューはjqueryを用いて動きのあるものにしています。</p>
 
 <h2>gulpで行っていること</h2>
