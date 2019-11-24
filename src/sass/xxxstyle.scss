@@ -27,16 +27,14 @@ $sp: 480px; // スマホ
 $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
 
 .header {
+  position: absolute;
   height: 100px;
   width: 100%;
-  position: absolute;
   z-index: 99;
 
   @include pc {
-    background-color: #fff;
     height: 60px;
     padding-top: 5px;
-    position: fixed;
   }
 
   .header-inner {
@@ -273,7 +271,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
       padding: 100px 0;
       height: 450px;
       opacity: 0;
-      transform: translate(0, 50);
+      transform: translate(0, 150);
       transition: all 1s ease-in;
 
       @include pc {
@@ -340,7 +338,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
         .info-link {
           font-size: 20px;
           letter-spacing: 1.5px;
-          background-color: rgb(215, 243, 252);
+          background-color: rgb(205, 232, 241);
           margin-left: 50px;
           padding: 20px 120px;
 
@@ -536,8 +534,13 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
         }
       }
 
-      @include sp {
-        .works-text {
+      .works-text {
+        display: inline;
+        line-height: 1.2;
+        background-color: #fff;
+        color: black;
+
+        @include sp {
           font-size: 14px;
         }
       }
@@ -693,8 +696,8 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
 
   .footer-bottom {
     // height: 100px;
-    font-size: 16px;
-    padding: 20px 10%;
+    font-size: 12px;
+    padding: 20px 0;
     display: flex;
 
     @include pc {
@@ -718,28 +721,12 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
     }
   }
 }
-// ページ遷移用
-// .page-transition {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 200vw;
-//     height: 100%;
-//     background-color: whitesmoke;
-//     z-index: 10;
-//     pointer-events: none;
-//     transition: transform .6s ease-in-out;
-//     transform: translateX(-200vw);
-// }
-// .transition .move {
-//     transform: translateX(300vw);
-// }
 
-.news-header {
-  position: static;
-}
 .news-top {
   .news-top-wrap {
+    .news-margin {
+      height: 100px;
+    }
     .news-top-bg {
       width: 100vw;
       height: 200px;
@@ -772,7 +759,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
       .home-news {
         text-align: right;
         padding-right: 10%;
-        font-size: 20px;
+        font-size: 16px;
 
         @include pc {
           font-size: 14px;
@@ -827,40 +814,37 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
 
   a {
     padding: 0 8px;
-    border: 1px solid rgb(46, 46, 238);
+    border: 1px solid rgb(50, 50, 160);
     background-color: rgb(247, 247, 247);
     font-size: 20px;
     font-family: sans-serif;
   }
 
   a:first-child {
-    background-color: rgb(46, 46, 238);
+    background-color: rgb(50, 50, 160);
     color: white;
   }
 }
 
-// .shutter {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 200vw;
-//     height: 100vh;
-//     background-color: #F0C010;
-//     z-index: 99;
-//     pointer-events: none;
-//     transition: transform .8s ease-in-out;
-// }
+.barba-leave-active,
+.barba-enter-active {
+  transition: opacity 450ms ease;
+}
 
-// .shutter-a {
-//     transform: translateX(100vw);
-// }
-// .shutter-a.moved {
-//     transform: translateX(-200vw);
-// }
+/* initial state */
+.barba-leave {
+  opacity: 1;
+}
 
-// .shutter-b {
-//     transform: translateX(-200vw);
-// }
-// .shutter-b.moved {
-//     transform: translateX(100vw);
-// }
+.barba-enter {
+  opacity: 0;
+}
+
+/* ending state */
+.barba-leave-to {
+  opacity: 0;
+}
+
+.barba-enter-to {
+  opacity: 1;
+}

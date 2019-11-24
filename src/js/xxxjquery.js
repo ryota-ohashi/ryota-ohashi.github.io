@@ -5,6 +5,7 @@ $(function(){
             var isPos = $(this).offset().top,
                 scroll = $(window).scrollTop(),
                 windowHeight = $(window).height();
+                
             if (scroll > isPos - windowHeight +150){
                 $(this).addClass('is');
                 }else {
@@ -16,5 +17,4 @@ $(function(){
     $('#sp-gnav').click(function(){
         $('.header-inner').toggleClass('open');
     });
-
 });
