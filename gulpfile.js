@@ -29,7 +29,7 @@ function imgmin() {
 //jsファイルを結合して圧縮
 function jsCom() {
   return gulp
-    .src("src/js/**/*.js", { sourcemaps: true })
+    .src(["src/js/**/*.js", "!src/js/**/_*.js"],{ sourcemaps: false })
     .pipe(
       babel({
         presets: ['@babel/env'],
