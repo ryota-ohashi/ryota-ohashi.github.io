@@ -26,10 +26,10 @@ function imgmin() {
     .pipe(gulp.dest('dist/images'));
 };
 
-//jsファイルを結合して圧縮
+//jsファイルを結合して圧縮（Three.jsとjquery.jsのみ）
 function jsCom() {
   return gulp
-    .src(["src/js/**/*.js", "!src/js/**/_*.js"],{ sourcemaps: false })
+    .src(["src/js/**/three.js", "src/js/**/jquery.js"],{ sourcemaps: false })
     .pipe(
       babel({
         presets: ['@babel/env'],
@@ -38,7 +38,14 @@ function jsCom() {
     .pipe(plumber())
     .pipe(concat('all.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest("dist/js", { sourcemaps: 'maps' }));
+    .pipe(gulp.dest("dist/js"));
+}
+
+//その他のjsファイルをsrcからdistへ
+function jsMove() {
+  return gulp
+    .src(["src/js/**/*.js", "!src/js/**/three.js", "!src/js/**/jquery.js"],{ sourcemaps: false })
+    .pipe(gulp.dest("dist/js"));
 }
 
 // sassをコンパイルして、プレフィクサーつけて圧縮
@@ -80,13 +87,14 @@ function watchFiles(done) {
     done();
   };
   gulp.watch('src/sass').on('change', gulp.series(sassCom, browserReload));
-  gulp.watch('src/js').on('change', gulp.series(jsCom, browserReload));
+  gulp.watch('src/js').on('change', gulp.series(jsCom, jsMove, browserReload));
   gulp.watch('src/images').on('change', gulp.series(imgmin, browserReload));
   gulp.watch('*.html').on('change', gulp.series(browserReload));
 }
 
-gulp.task('default', gulp.series(gulp.parallel(sassCom, jsCom, imgmin), gulp.series(browsersync, watchFiles)));
+gulp.task('default', gulp.series(gulp.parallel(sassCom, jsCom, jsMove, imgmin), gulp.series(browsersync, watchFiles)));
 
 gulp.task("imgmin", imgmin);
 gulp.task('jsCom', jsCom);
+gulp.task('jsMove', jsMove);
 gulp.task('sassCom', sassCom);
