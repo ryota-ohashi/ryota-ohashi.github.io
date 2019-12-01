@@ -16,5 +16,4 @@ barba.use(barbaCss);
     // タグを追加
     // $('head').appendTo($newPageMeta);
 // }
-
 barba.init();
