@@ -3,26 +3,179 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="今まで作成してきたものを掲載しているポートフォリオサイトです。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>　
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/portfolio.css">
   <title>RYOTA OHASHI</title>
 </head>
 
-<body class="canvas-page">
-  <div class="wrap">
-    <canvas id="canvas"></canvas>
-    <div id="target" class="typing">Which is the portfolio?<br>What I see in the black box is...? </div>
-    <div class="button-frame">
-      <button class="button" id="button">Open</button>
+<body id="top">
+
+  <header class="head">
+    <div class="head__top">
+      <h1 class="head__top-title">PORTFOLIO<br>BY<br>RYOTA OHASHI</h1>
+      <h2 class="head__top-subtitle">web engineer</h2>
     </div>
-  </div>
-  <script src="dist/js/all.min.js"></script>
+    <div class="head__line"></div>
+    <gnav class="head__gnav">
+      <ul>
+        <li class="head__gnav__item js-trigger" data-mt-duration="300"><a href="#top">TOP</a></li>
+        <li class="head__gnav__item js-trigger" data-mt-duration="300"><a href="#about">ABOUT</a></li>
+        <li class="head__gnav__item js-trigger" data-mt-duration="300"><a href="#skills">SKILLS</a></li>
+        <li class="head__gnav__item js-trigger" data-mt-duration="300"><a href="#portfolio">PORTFOLIO</a></li>
+        <li class="head__gnav__item js-trigger" data-mt-duration="300"><a href="#contact">CONTACT</a></li>
+      </ul>
+    </gnav>
+  </header>
+
+  <main class="cont">
+    <img src="dist/images/portfolio_top_wave_and_hand.png"　class="cont__collage" alt="波と手と正方形のコラージュ">
+
+    <section class="cont__prof" id="about">
+      <div class="cont__prof__triangle">▼</div>
+      <h2 class="cont__prof-title">ABOUT</h2>
+      <div class="cont__prof__line">-------</div>
+      <p class="cont__prof-text">
+        1996年生まれの21卒生。<br>
+        埼玉大学大学院理工学研究科数理電子情報系専攻に在籍中の修士1年。<br><br>
+        大学での専門は電気電子なのですが、将来的な働き方や個人としての価値を考えた末に、webに関連する仕事がしたいと強く思い、方向転換しました。<br><br>
+        独学で学んできたWEB制作のスキルが活かせる会社への就職を考えています。<br><br>
+        どんなデザインにも柔軟に対応出来るフロントエンドエンジニアを目指します！<br>
+        また、UI, UXを意識したWEBデザインやWEBメディア構築にも興味が有り、Vue.jsにも後々手を出してみたいです。<br><br>
+        趣味は文学全般で、小説や詩、短歌などが好き。
+      </p>
+    </section>
+
+    <section class="cont__prof" id="skills">
+
+      <div class="cont__prof__triangle">▼</div>
+      <h2 class="cont__prof-title">SKILLS</h2>
+      <div class="cont__prof__line">-------</div>
+      <p class="cont__prof-text">使用経験のあるもの。</p>
+
+      <div class="cont__prof__skills">
+        <ul>
+          <li class="cont__prof__skills-main">HTML5</li>
+        </ul>
+
+        <ul>
+          <li class="cont__prof__skills-main">CSS3 ></li>
+          <ul>
+            <li class="cont__prof__skills-sub">SASS(scss)</li>
+            <li class="cont__prof__skills-sub">BootStrap4</li>
+          </ul>
+        </ul>
+
+        <ul>
+          <li class="cont__prof__skills-main">JavaScript ></li>
+          <ul>
+            <li class="cont__prof__skills-sub">jQuery</li>
+            <li class="cont__prof__skills-sub">Gulp4</li>
+            <li class="cont__prof__skills-sub">Three.js</li>
+            <li class="cont__prof__skills-sub">Barba.js v2</li>
+            <li class="cont__prof__skills-sub">Pace.js</li>
+            <li class="cont__prof__skills-sub">t.js</li>
+          </ul>
+        </ul>
+
+        <ul>
+          <li class="cont__prof__skills-main">WordPress</li>
+        </ul>
+
+        <ul>
+          <li class="cont__prof__skills-main">PhotoShop</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cont__prof" id="portfolio">
+
+      <div class="cont__prof__triangle">▼</div>
+      <h2 class="cont__prof-title">PORTFOLIO</h2>
+      <div class="cont__prof__line">-------</div>
+      <p class="cont__prof-text">
+        実務経験はありませんが、幾つかの自作がありますので、紹介させて下さい！
+      </p>
+
+      <ul class="cont__prof__portfolio">
+
+        <li class="cont__prof__portfolio__item">
+          <img src="dist/images/whitethings_portfolio.jpg" alt="White Thingsのトップページ">
+          <h3 class="cont__prof__portfolio__item__title">White Things</h3>
+          <p class="cont__prof__portfolio__item__text">
+            テンプレートは使わずに0からテーマを作成し、WEBメディアサイトを構築しました。<br>
+            HTML5/CSS3/JavaScript/PHP/WordPressを用いて制作。<br>
+            レスポンシブ対応済み。
+          </p>
+          <p class="cont__prof__portfolio__item__date">(制作日：2019-08)</p>
+          <a href="http://whitethings.wp.xdomain.jp/" class="button">Click to visit</a>
+        </li>
+
+        <li class="cont__prof__portfolio__item">
+          <img src="dist/images/xxxcorporate_portfolio.jpg" alt="株式会社XXX設計事務所のトップページ">
+          <h3 class="cont__prof__portfolio__item__title">コーポレートサイト</h3>
+          <p class="cont__prof__portfolio__item__text">
+            Barba.jsを試してみたくなり、奥村設計事務所様(http://www.om-s.co.jp/)のサイトデザインを参考にさせて頂きつつ実装しました。<br>
+            HTML5/CSS3/jQuery/Barba.jsを用いて制作。<br>
+            レスポンシブ対応済み。
+          </p>
+          <p class="cont__prof__portfolio__item__date">(制作日：2019-07)</p>
+          <a href="xxxcorporate.html" class="button">Click to visit</a>
+        </li>
+        
+        <li class="cont__prof__portfolio__item">
+          <img src="dist/images/previous_portfolio.jpg" alt="旧ポートフォリオサイト">
+          <h3 class="cont__prof__portfolio__item__title">旧ポートフォリオサイト</h3>
+          <p class="cont__prof__portfolio__item__text">
+            Three.jsを用いてブラックボックスが回るサイトを作りました。<br>
+            「人はブラックボックス」をコンセプトに作成。<br>
+            HTML5/CSS3/jQuery/Three.jsを用いて制作。<br>
+            レスポンシブ対応済み。
+          </p>
+          <p class="cont__prof__portfolio__item__date">(制作日：2019-06)</p>
+          <a href="previous-portfolio.html" class="button">Click to visit</a>
+        </li>
+
+        <li class="cont__prof__portfolio__item">
+          <img src="dist/images/magazine_portfolio.jpg" alt="メディアサイト">
+          <h3 class="cont__prof__portfolio__item__title">メディアトップページ</h3>
+          <p class="cont__prof__portfolio__item__text">
+            HTML5/CSS3/jQueryを用いて制作。<br>
+            レスポンシブ対応済み。
+          </p>
+          <p class="cont__prof__portfolio__item__date">(制作日：2019-05)</p>
+          <a href="magazine.html" class="button">Click to visit</a>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="cont__prof" id="contact">
+      <div class="cont__prof__triangle">▼</div>
+      <h2 class="cont__prof-title">CONTACT</h2>
+      <div class="cont__prof__line">-------</div>
+      <p class="cont__prof__contact">
+        E-mail<br>
+        ▼<br>
+        r.ohashi.099@ms.saitama-u.ac.jp<br><br>
+        -------<br>
+        Wantedly<br>
+        ▼<br>
+        https://www.wantedly.com/users/103712321
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">copyright 2019 RYOTA OHASHI</p>
+  </footer>
+
+  <script src="dist/js/moveTo.min.js"></script>
+  <script src="dist/js/portfolio.js"></script>
 </body>
 
 </html>
