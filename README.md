@@ -2,14 +2,14 @@
 <p>HTML5, CSS3, Sass(scss), BootStrap4, JavaScript, jQuery, WordPress, gulp, Three.js, Barba.js, Pace.js, t.js, PhotoShop</p>
 <p>ポートフォリオサイトは<a href="https://ryota-ohashi.github.io/">こちら</a></p>
 
-<h2>新ポートフォリオサイト(2019年11月制作)</h2>
+<h3>新ポートフォリオサイト(2019年11月制作)</h3>
 <a href="https://ryota-ohashi.github.io/">サイトはこちら</a>
 <p>HTML5/CSS3/jQuery/PhotoShopを用いて制作。</p>
 <p>前のポートフォリオサイトはシンプル過ぎていたので、改めてデザインし、構築し直しました。<br>画面左側を固定し、右側のみスクロールされる設計。トップのコラージュも自作しています。また、初めてPhotoShopを使ったのですが、まだ慣れません。</p>
 
 <h2>WordPressサイト(2019年8月制作)</h2>
 <a href="http://whitethings.wp.xdomain.jp">White Things</a>
-HTML5/CSS3/JavaScript/PHP/WordPressを用いて制作。</p>
+<p>HTML5/CSS3/JavaScript/PHP/WordPressを用いて制作。</p>
 <p>ゼロからテーマを作成し、メディアサイトを構築しました。FileZillaを試してみたかったので、試しのXFREEサーバーで公開しています。</p>
 
 <h2>コーポレートサイト模写(2019年7月制作)</h2>
