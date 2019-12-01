@@ -1,10 +1,10 @@
 <h2>これまでに使用した言語やライブラリ、ツール</h2>
-<p>HTML5, CSS3, Sass(scss), JavaScript, jQuery, WordPress, gulp, Three.js, Barba.js, Pace.js</p>
+<p>HTML5, CSS3, Sass(scss), BootStrap4, JavaScript, jQuery, WordPress, gulp, Three.js, Barba.js, Pace.js, t.js, PhotoShop</p>
 <p>ポートフォリオサイトは<a href="https://ryota-ohashi.github.io/">こちら</a></p>
 
 <h2>新ポートフォリオサイト(2019年11月制作)</h2>
 <a href="https://ryota-ohashi.github.io/">サイトはこちら</a>
-HTML5/CSS3/jQuery/PhotoShopを用いて制作。</p>
+<p>HTML5/CSS3/jQuery/PhotoShopを用いて制作。</p>
 <p>前のポートフォリオサイトはシンプル過ぎていたので、改めてデザインし、構築し直しました。<br>画面左側を固定し、右側のみスクロールされる設計。トップのコラージュも自作しています。また、初めてPhotoShopを使ったのですが、まだ慣れません。</p>
 
 <h2>WordPressサイト(2019年8月制作)</h2>
