@@ -2,6 +2,11 @@
 <p>HTML5, CSS3, Sass(scss), JavaScript, jQuery, WordPress, gulp, Three.js, Barba.js, Pace.js</p>
 <p>ポートフォリオサイトは<a href="https://ryota-ohashi.github.io/">こちら</a></p>
 
+<h2>新ポートフォリオサイト(2019年11月制作)</h2>
+<a href="https://ryota-ohashi.github.io/">サイトはこちら</a>
+<p>前のポートフォリオサイトはシンプル過ぎていたので、改めてデザインし、構築し直しました。</p>
+<p>画面左側を固定し、右側のみスクロールされる設計。トップのコラージュも自作してみました。</p>
+
 <h2>WordPressサイト(2019年8月制作)</h2>
 <a href="http://whitethings.wp.xdomain.jp">White Things</a>
 <p>ゼロからテーマを作成し、メディアサイトを構築しました。FileZillaを試してみたかったので、試しのXFREEサーバーで公開しています。</p>
@@ -11,8 +16,8 @@
 <p>HTML5, CSS3, jQuery, Barba.jsを用いて制作。</p>
 <p>Barba.jsを試してみたくなり、二ページのみ作成しました。<br>デザインで参考にさせて頂いたのは奥村設計事務所様のコーポレートサイトで、スクロールによるフェードインや処々のホバー等を参考にさせて頂きました。</p>
 
-<h2>ポートフォリオページ(2019年6月制作)</h2>
-<a href="https://ryota-ohashi.github.io/">サイトはこちら</a>
+<h2>旧ポートフォリオページ(2019年6月制作)</h2>
+<a href="https://ryota-ohashi.github.io/previous_portfolio">サイトはこちら</a>
 <p>HTML5, CSS3, jQuery, JavaScript, Three.jsを用いて制作。ローディング画面はPACE.jsを改変。</p>
 <p>人間とはブラックボックスである。ということをテーマにThree.jsで黒い立方体を作製し、ポートフォリオはその中身というコンセプトで、ロゴは展開図になっています。</p>
 
