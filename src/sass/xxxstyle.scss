@@ -255,7 +255,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
         margin-top: 30px;
       }
       @include sp {
-        width: 100px;
+        width: 120px;
         margin: 5px auto;
       }
     }
@@ -284,7 +284,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
         height: 550px;
       }
       @include sp {
-        height: 400px;
+        height: 450px;
       }
 
       .info-text {
@@ -482,7 +482,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
 
   .works-item-button {
     width: 33.3%;
-    background-image: url("../images/work.jpg");
+    background-image: url("../images/xxx_works.jpg");
     background-size: cover;
     color: white;
 
@@ -545,6 +545,12 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
         }
       }
     }
+  }
+  .works-item-button:nth-of-type(2) {
+    background-image: url("../images/xxxqa.jpg");
+  }
+  .works-item-button:nth-of-type(3) {
+    background-image: url("../images/xxx_contact.jpg");
   }
 }
 
@@ -703,6 +709,9 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
     @include pc {
       font-size: 12px;
       flex-direction: column;
+    }
+    @include sp {
+      padding-left: 20px;
     }
 
     .footer-company {

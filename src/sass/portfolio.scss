@@ -1,0 +1,338 @@
+@charset "UTF-8";
+
+// メディアクエリ用
+$pc: 1024px; // PC, iPad Pro
+$tab: 768px; // タブレット
+$sp: 480px; // 6 ~ X
+$se: 320px; //iPhone5, SE
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin se {
+  @media (max-width: ($se)) {
+    @content;
+  }
+}
+
+$EngFont: "arial light", sans-serif;
+$JapFont: 'Noto Sans JP', sans-serif;
+$Blue: rgb(54, 127, 187);
+$bg : #ebf2f9;
+
+//リセット用
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+body {
+	background-color: $bg;
+}
+
+.head {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	width: 40vw;
+	padding: 5% 0 3% 3%;
+	letter-spacing: 3px;
+	z-index: 99;
+
+	@include sp {
+		padding: 5% 0 10% 3%;
+	}
+
+	&__top {
+		font-family: $EngFont;
+		padding: 20% 0 0 30%;
+		white-space: nowrap;
+		transition: .3s ease;
+
+		&-title {
+			font-size: 26px;
+			letter-spacing: 10px;
+			line-height: 1.7;
+
+			@include tab {
+				font-size: 20px;
+			}
+			@include se {
+				font-size: 16px;
+			}
+		}
+
+		&-subtitle {
+			font-size: 16px;
+			color: grey;
+
+			@include tab {
+				font-size: 12px;
+			}
+		}
+	}
+
+	&__line {
+		width: 2px;
+		height: 50px;
+		background-color: $Blue;
+		margin: 0 0 0 auto;
+
+		@include tab {
+			margin: 0 0 0 50%;
+		}
+		@include se {
+			margin: 20px 0 0 50%;
+		}
+	}
+
+	&__gnav__item {
+		font-size: 12px;
+		margin: 12px 0;
+
+		@include tab {
+			font-size: 10px;
+			margin: 20px 0;
+		}
+		@include se {
+			transform: scale(0.8);
+		}
+
+		// & resize {
+		// 	position: absolute;
+		// 	left: 5px;
+		// 	bottom: 5px;
+		// }
+	}
+}
+
+.cont {
+	position: relative;
+	width: 55vw;
+	margin: 0 0 0 auto;
+	padding: 5% 10% 0 0;
+	text-align: center;
+	overflow: hidden;
+
+	@include tab {
+		width: 75vw;
+		padding: 5% 5% 0 0;
+	}
+	@include sp {
+		padding: 30vh 5% 0 0;
+	}
+
+	& img {
+		width: 45vw;
+
+		@include tab {
+			width: 65vw;
+		}
+	}
+
+	&__prof {
+		width: 40vw;
+		margin: 0 auto;
+		margin-top: 50px;
+
+		@include tab {
+			width: 55vw;
+		}
+		@include sp {
+			width: 60vw;
+		}
+
+		&__triangle {
+			color: $Blue;
+			font-size: 36px;
+		}
+		&-title {
+			font-family: $EngFont;
+			letter-spacing: 5px;
+			margin: 10px 0 20px;
+
+			@include tab {
+				font-size: 18px;
+			}
+			@include sp {
+				margin: 5px 0 10px;
+			}
+		}
+		&__line {
+			color: $Blue;			
+			margin-bottom: 20px;
+
+			@include sp {
+				margin-bottom: 10px;
+			}
+		}
+		&-text {
+			font-family: $JapFont;
+			text-align: left;
+			margin-bottom: 30px;
+			word-break: break-all;
+
+			@include sp {
+				font-size: 14px;
+			}
+		}
+		&__skills {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+			letter-spacing: 5px;
+
+			@include pc {
+				letter-spacing: 2px;
+				font-size: 14px;
+			}
+			@include sp {
+				font-size: 12px;
+			}
+
+			&-main::before {
+				content: "●";
+				color: $Blue;
+			}
+			&-sub {
+				padding-bottom: 5px;
+			}
+			&-sub::before {
+				content: "●";
+				font-size: 12px;
+				color: $Blue;
+				opacity: 0.7;
+			}
+
+			& > ul {
+				display: flex;
+				padding: 10px 0;
+				border-bottom: 1px dashed $Blue;
+
+				@include sp {
+					padding: 5px 0;
+				}
+
+				&:first-child {
+					border-top: 1px dashed $Blue;
+				}
+
+				& > ul, & > li {
+					width: 250px;
+				}
+			}
+		}
+
+		&__portfolio {
+			
+			&__item {
+
+				img {
+					width: 40vw;
+
+					@include tab {
+						width: 55vw;
+					}
+					@include sp {
+						width: 60vw;
+					}
+				}
+				&__title {
+					font-family: $EngFont;
+					margin: 15px 0;
+
+					@include sp {
+						font-size: 16px;
+					}
+				}
+				&__text {
+					font-size: 14px;
+					font-family: $JapFont;
+					word-break: break-all;
+					text-align: left;
+					margin-bottom: 10px;
+				}
+				&__date {
+					text-align: right;
+					font-size: 12px;
+
+					@include se {
+						font-size: 10px;
+					}
+				}
+				.button {
+					display: block;
+					font-family: $EngFont;
+					padding: 10px;
+					margin: 10px 0 50px;
+					letter-spacing: 2px;
+					border: 1px solid $Blue;
+					background-color: $bg;
+					color: $Blue;
+					transition: .3s ease;
+
+					&:hover {
+						color: white;
+						background-color: $Blue;
+					}
+				}
+				
+			}
+		}
+		&__contact {
+			margin-bottom: 50px;
+			word-break: break-all;
+			color: grey;
+
+			@include se {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+.footer {
+	position: fixed;
+	top: 50vh;
+	right: -50px;
+	color: grey;
+	font-size: 12px;
+	letter-spacing: 2px;
+	transform: rotate(-90deg);
+
+	@include pc {
+		right: -70px;
+	}
+	@include tab {
+		font-size: 10px;
+		right: -80px;
+	}
+	@include sp {
+		position: static;
+		transform: rotate(0deg);
+		transform: scale(0.8);
+		text-align: center;
+	}
+}
