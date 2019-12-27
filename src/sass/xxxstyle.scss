@@ -589,7 +589,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
           padding-top: 15px;
         }
         @include sp {
-          font-size: 20px;
+          font-size: 24px;
         }
       }
       .recruit-subtitle {
@@ -605,7 +605,7 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
           font-size: 16px;
         }
         @include sp {
-          font-size: 12px;
+          font-size: 14px;
           padding: 5px;
         }
       }
@@ -623,6 +623,10 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
         }
         @include tab {
           margin-bottom: 20px;
+        }
+        @include sp {
+          line-height: 1.5;
+          letter-spacing: 1px;
         }
       }
       .recruit-link {
@@ -735,6 +739,10 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
   .news-top-wrap {
     .news-margin {
       height: 100px;
+
+      @include pc {
+        height: 60px;
+      }
     }
     .news-top-bg {
       width: 100vw;
@@ -748,6 +756,11 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
     .news-logo {
       padding-top: 50px;
       padding-left: 15%;
+
+      @include sp {
+        padding-left: 10%;
+        padding-top: 20px;
+      }
 
       .logo-title {
         font-size: 52px;
@@ -772,6 +785,9 @@ $title-font: "YuMincho", "Yu Mincho", "游明朝体", sans-serif;
 
         @include pc {
           font-size: 14px;
+        }
+        @include sp {
+          font-size: 10px;
         }
       }
     }
