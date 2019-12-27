@@ -1,11 +1,17 @@
 <h3>これまでに使用した言語やライブラリ、ツール</h3>
-<p>HTML5, CSS3, Sass(scss), BootStrap4, JavaScript, jQuery, WordPress, gulp, Three.js, Barba.js, Pace.js, t.js, PhotoShop</p>
+<p>HTML5/CSS3/Sass(scss)/BootStrap4/JavaScript/jQuery/WordPress/gulp/Three.js/Barba.js/Swiper.js/Pace.js/t.js/PhotoShop</p>
 <p>ポートフォリオサイトは<a href="https://ryota-ohashi.github.io/">こちら</a></p>
 
-<h3>新ポートフォリオサイト(2019年11月制作)</h3>
+<h3>新ポートフォリオサイト(2019年12月制作)</h3>
 <a href="https://ryota-ohashi.github.io/">サイトはこちら</a>
 <p>HTML5/CSS3/jQuery/PhotoShopを用いて制作。</p>
 <p>前のポートフォリオサイトはシンプル過ぎていたので、改めてデザインし、構築し直しました。<br>画面左側を固定し、右側のみスクロールされる設計。トップのコラージュも自作しています。また、初めてPhotoShopを使ったのですが、まだ慣れません。</p>
+
+<h3>WordPressコーポレートサイト(2019年12月制作)</h3>
+<a href="http://saishin.starfree.jp/">サイトはこちら</a>
+<p>HTML5/CSS3/JavaScript/WordPress/PhotoShopを用いて制作。</p>
+<p>WordPressを用いて０から架空の会社のコーポレートサイトを制作致しました。<br>
+</p>
 
 <h3>WordPressサイト(2019年8月制作)</h3>
 <a href="http://whitethings.wp.xdomain.jp">White Things</a>
