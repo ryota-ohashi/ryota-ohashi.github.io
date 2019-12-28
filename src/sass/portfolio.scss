@@ -97,8 +97,8 @@ body {
 		letter-spacing: 5px;
 		padding: 20px 0 20px 60px;
 
-		@include pc {
-			padding: 15px 0 15px 30px ;
+		@include lpc {
+			padding: 10px 0 10px 30px ;
 		}
 		@include sp {
 			padding: 15px 0 15px 20px ;
@@ -109,7 +109,7 @@ body {
 			line-height: 1.4;
 
 			@include lpc {
-				font-size: 18px;
+				font-size: 16px;
 			}
 			@include pc {
 				font-size: 14px;
@@ -124,7 +124,7 @@ body {
 			transition: .3s ease;
 
 			@include lpc {
-				font-size: 14px;
+				font-size: 12px;
 				padding-top: 10px;
 			}
 			@include pc {
@@ -192,7 +192,7 @@ body {
 
 					@include lpc {
 						font-size: 14px;
-						padding: 0 30px 10px;
+						padding: 0 20px 10px;
 					}		
 					@include pc {
 						font-size: 12px;
