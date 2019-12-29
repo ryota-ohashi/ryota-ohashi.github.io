@@ -100,7 +100,7 @@ body {
 		@include lpc {
 			padding: 10px 0 10px 30px ;
 		}
-		@include sp {
+		@include tab {
 			padding: 15px 0 15px 20px ;
 		}
 
@@ -294,7 +294,7 @@ body {
 }
 
 .cont {
-	margin: -50px -10px 0 0;
+	padding: -50px -10px 0 0;
 
 	&__top {
 		height: 100vh;
