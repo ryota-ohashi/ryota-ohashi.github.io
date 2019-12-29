@@ -31,38 +31,43 @@ window.addEventListener('DOMContentLoaded', () => {
         //ヘッダー用
         if(currentPosition > 50) {
 
+            //spmenuが開いているならば、固定
             if ( !$('body').hasClass('open') ) {
                 $('.header').css('border', '1px solid #333');
                 $('.header__intro__subtitle').css('display', 'none');
                 $('.header__spmenu').css('top', '9px');
             };
 
-            // if ( $(window).width() > 768 ) {
-                $('.header').css('top', '-1px');
-            // }            
+            //border1px文を加味して上へ(特にsp用)
+            $('.header').css('top', '-1px');
+            //header__bg用
             $('.header__bg').css('height', '100%');
         }
         else {
 
+            //tab以上の時、headerが動く
             if ( $(window).width() > 768 ) {
                 $('.header').css('top', '50px');
             }
+
+            //spmenuが開いているならば、固定
             if ( !$('body').hasClass('open') ) {
                 $('.header').css('border', '1px solid grey');
                 $('.header__intro__subtitle').css('display', 'block');
                 $('.header__spmenu').css('top', '22px');
             };
+            //header__bg用
             $('.header__bg').css('height', '0%');
         };
 
-        //背景色用
+        //背景色変更用
         let aboutSection = $('#about').offset().top;
         let skillsSection = $('#skills').offset().top;
         let portfolioSection = $('#portfolio').offset().top;
         let contactSection = $('#contact').offset().top;
 
         let screenHeight = $(window).height();
-        let adjustmentValue = screenHeight / 2;
+        let adjustmentValue = screenHeight / 2;　//調整値
 
         if( skillsSection - adjustmentValue >= currentPosition && currentPosition >= aboutSection - adjustmentValue ) {
             $('.bg').css('background-color', '#ccc');
