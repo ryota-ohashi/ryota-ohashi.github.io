@@ -37,7 +37,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 $('.header__spmenu').css('top', '9px');
             };
 
-            $('.header').css('top', '-1px');
+            // if ( $(window).width() > 768 ) {
+                $('.header').css('top', '-1px');
+            // }            
             $('.header__bg').css('height', '100%');
         }
         else {
