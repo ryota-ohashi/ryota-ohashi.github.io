@@ -31,33 +31,36 @@ window.addEventListener('DOMContentLoaded', () => {
         //ヘッダー用
         if(currentPosition > 50) {
 
-            //spmenuが開いているならば、固定
+            //spmenuが開いていない時
             if ( !$('body').hasClass('open') ) {
+                
                 $('.header').css('border', '1px solid #333');
                 $('.header__intro__subtitle').css('display', 'none');
                 $('.header__spmenu').css('top', '9px');
+                //border1px文を加味して上へ(特にsp用)
+                $('.header').css('top', '-1px');
+                //header__bg用
+                $('.header__bg').css('height', '100%');
             };
-
-            //border1px文を加味して上へ(特にsp用)
-            $('.header').css('top', '-1px');
-            //header__bg用
-            $('.header__bg').css('height', '100%');
+            
         }
         else {
 
-            //tab以上の時、headerが動く
             if ( $(window).width() > 768 ) {
                 $('.header').css('top', '50px');
             }
 
-            //spmenuが開いているならば、固定
+            //spmenuが開いていないとき
             if ( !$('body').hasClass('open') ) {
+
+                //tab以上の時、headerが動く
                 $('.header').css('border', '1px solid grey');
                 $('.header__intro__subtitle').css('display', 'block');
                 $('.header__spmenu').css('top', '22px');
+
+                //header__bg用
+                $('.header__bg').css('height', '0%');
             };
-            //header__bg用
-            $('.header__bg').css('height', '0%');
         };
 
         //背景色変更用
