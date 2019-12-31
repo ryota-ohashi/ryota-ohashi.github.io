@@ -6,6 +6,7 @@ $pc: 1024px; // PC, iPad Pro
 $tab: 768px; // タブレット
 $sp: 480px; // 6 ~ X
 $se: 340px; //SE
+$sprand: 420px;//スマホ横向き高さ用
 
 @mixin lpc {
   @media (max-width: ($lpc)) {
@@ -31,6 +32,11 @@ $se: 340px; //SE
   @media (max-width: ($se)) {
     @content;
   }
+}
+@mixin sprand {
+	@media (max-height: ($sprand)) {
+		@content;
+	}
 }
 
 $EngFont: 'Montserrat', "century gothic", "arial light", sans-serif;
@@ -260,7 +266,7 @@ body {
 //spmenuクリックでbodyにclass="open"付与
 .open .header {
 	width: 100vw;
-	height: 100vh;
+	height: calc(100vh + 1px);
 	padding: 0 5%;
 	border: 1px solid #333;
 	background-color: #333;
@@ -292,6 +298,21 @@ body {
 		top: 50%;
 	}
 }
+
+// .trigger .header{
+// 	border: 1px solid #333;
+// 	top: -1px;
+
+// 	& .header__intro__subtitle {
+// 		display: none;
+// 	}
+// 	& .header__spmenu {
+// 		top: 9px;
+// 	}
+// 	& .header__bg {
+// 		height: 100%;
+// 	}
+// }
 
 .cont {
 	padding: -50px -10px 0 0;
@@ -325,10 +346,13 @@ body {
 					font-size: 46px;
 				}
 				@include sp {
-					font-size: 36px;
+					font-size: 42px;
 				}
 				@include se {
 					font-size: 28px;
+				}
+				@include sprand {
+					font-size: 20px;
 				}
 
 				& .return1 {
@@ -344,7 +368,11 @@ body {
 					@include tab {
 						display: block;
 					}
+					@include sprand {
+						display: none;
+					}
 				}
+
 			}
 
 			&__keywords {
@@ -369,15 +397,29 @@ body {
 						font-size: 18px;
 						margin-bottom: 10px;
 					}
+					@include sp {
+						font-size: 14px;
+					}
+					@include sprand {
+						font-size: 14px;
+					}
 				}
 
 				&__list {
+					font-size: 14px;
 					letter-spacing: 2px;
 					font-family: $JapFont;
 
 					@include sp {
+						font-size: 12px;
 						padding-bottom: 10px;
 					}
+					@include sprand {
+						font-size: 10px;
+					}
+				}
+				.resize &__list {
+					font-size: 10px;
 				}
 
 			}
@@ -572,11 +614,8 @@ body {
 			
 				&__text {
 					line-height: 1.7;
+					text-align: left;
 					word-break: break-all;
-
-					@include lpc {
-						text-align: left;
-					}
 				}
 
 				&__date {
@@ -638,5 +677,8 @@ body {
 	@include sp {
 		font-size: 10px;
 		transform: scale(0.8);
+	}
+	@include sprand {
+		font-size: 10px;
 	}
 }
