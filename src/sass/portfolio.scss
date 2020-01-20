@@ -299,21 +299,6 @@ body {
 	}
 }
 
-// .trigger .header{
-// 	border: 1px solid #333;
-// 	top: -1px;
-
-// 	& .header__intro__subtitle {
-// 		display: none;
-// 	}
-// 	& .header__spmenu {
-// 		top: 9px;
-// 	}
-// 	& .header__bg {
-// 		height: 100%;
-// 	}
-// }
-
 .cont {
 	padding: -50px -10px 0 0;
 
@@ -421,7 +406,6 @@ body {
 				.resize &__list {
 					font-size: 10px;
 				}
-
 			}
 		}
 
@@ -490,6 +474,15 @@ body {
 				letter-spacing: 2px;
 				line-height: 1.7;
 				font-family: $JapFont;
+
+				a {
+					color: #555;
+					transition: .3s ease-in-out;
+
+					&:hover {
+						color: white;
+					}
+				}
 			}
 		}
 	}
@@ -575,6 +568,11 @@ body {
 			}
 			&__description {
 				@extend .cont__about__box__description;
+			}
+			&__github {
+				color: black;
+				letter-spacing: 2px;
+				line-height: 1.7;
 			}
 		}
 
