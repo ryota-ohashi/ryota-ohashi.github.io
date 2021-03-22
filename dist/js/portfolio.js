@@ -2,13 +2,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	// スムーズスクロール
 	$('a[href^="#"]').click(function(){
-	var speed = 400;
-	var href = $(this).attr("href");
-	var tar = $(href == "#" || href == "" ? 'html' : href);
-	var pos = tar.offset().top - 100;
+		let speed = 400;
+		let href = $(this).attr("href");
+		let tar = $(href == "#" || href == "" ? 'html' : href);
+		let pos = tar.offset().top - 100;
 
-	$('html, body').animate({scrollTop: pos}, speed, 'swing');
-	return false;
+		$('html, body').animate({scrollTop: pos}, speed, 'swing');
+		return false;
 	});
 
 	//spmenu用
@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	//aタグをクリックしたときにspmenuを閉じる
-	$('.header__gnav__ul__item a').click(function(){
+	$('.header__gnav-item a').click(function(){
 		if ( $('body').hasClass('open') ) {
 			$('body').removeClass('open');
 		}
@@ -81,4 +81,31 @@ window.addEventListener('DOMContentLoaded', () => {
 			$('.bg').css('background-color', 'black');
 		};
 	});
+
+	let counter = 0;
+	let contTopBg = document.querySelector('.container-top__img');
+	const bgImage = [
+		'/dist/images/port_top.jpg',
+		'/dist/images/portfolio_top_img_sea.jpg'
+	];
+
+	function slideshow() {
+
+		contTopBg.style.backgroundImage = 'url('+ bgImage[counter] + ')';
+		// contTopBg = 'url('+ bgImage[counter] + ')';
+
+		if (counter >= (bgImage.length-1)) {
+			counter = 0;
+		}else {
+			counter++;
+		};
+
+
+		// console.log(counter);
+		// console.log(bgImage[counter]);
+		// console.log(contTopBg);
+
+	};
+
+	setInterval(slideshow, 5000);
 });

@@ -397,7 +397,9 @@ body {
 	&__img {
 		width: 60vw;
 		height: 100vh;
-		background: left / cover url(/dist/images/port_top.jpg);
+		background: left / cover;
+		background-image: url(/dist/images/port_top.jpg);
+		transition: background-image 2s ease-in-out;
 	}
 }
 //ここまでcontainer-top
@@ -412,36 +414,10 @@ body {
 		padding: 100px 0;
 	}
 
-	&__img {
-		width: 40vw;
-		padding-left: 10vw;
-		text-align: right;
-
-		@include pc {
-			padding-left: 5vw;
-		}
-		@include tab {
-			display: none;
-		}
-
-		& img {
-			width: 30vw;
-
-			@include pc {
-				width: 100%;
-			}
-		}
-	}
-
 	&__content {
-		width: 60vw;
-		padding: 10px 10vw 10px 5vw;
-
-		@include tab {
-			width: 80vw;
-			margin: 0 auto;
-			padding: 0;
-		}
+		width: 80vw;
+		margin: 0 auto;
+		padding: 0;
 
 	}
 	&__title {
