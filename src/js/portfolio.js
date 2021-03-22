@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		};
 	});
 
-	let counter = 0;
+	let counter = 1;
 	let contTopBg = document.querySelector('.container-top__img');
 	const bgImage = [
 		'/dist/images/port_top.jpg',
@@ -92,20 +92,13 @@ window.addEventListener('DOMContentLoaded', () => {
 	function slideshow() {
 
 		contTopBg.style.backgroundImage = 'url('+ bgImage[counter] + ')';
-		// contTopBg = 'url('+ bgImage[counter] + ')';
 
 		if (counter >= (bgImage.length-1)) {
 			counter = 0;
 		}else {
 			counter++;
 		};
-
-
-		// console.log(counter);
-		// console.log(bgImage[counter]);
-		// console.log(contTopBg);
-
 	};
-
 	setInterval(slideshow, 5000);
+
 });

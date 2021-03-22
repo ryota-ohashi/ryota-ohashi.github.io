@@ -408,16 +408,14 @@ body {
 .container-about {
 	display: flex;
 	align-items: flex-end;
-	padding: 10vh 0;
 
 	@include pc {
 		padding: 100px 0;
 	}
 
 	&__content {
-		width: 80vw;
-		margin: 0 auto;
-		padding: 0;
+		width: 100vw;
+		padding: 10vh 10vw;
 
 	}
 	&__title {
