@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta title="description" content="今まで作成してきたものを掲載しているポートフォリオサイトです。">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta title="description" containerent="ポートフォリオサイトです。">
+  <meta name="viewport" containerent="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" containerent="ie=edge">
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -18,49 +18,52 @@
 <body id="top" class="bg">
 
   <header class="header">
-    <div class="header__intro">
-      <h1 class="header__intro__title">PORTFOLIO BY<br>RYOTA OHASHI</h1>
-      <h2 class="header__intro__subtitle">WEB ENGINEER</h2>
+    <div class="header__heading">
+      <h1 class="header__heading-title">PORTFOLIO BY<br>RYOTA OHASHI</h1>
+      <h2 class="header__heading-subtitle">WEB ENGINEER</h2>
     </div>
     <nav class="header__gnav">
-      <ul class="header__gnav__ul">
-        <li class="header__gnav__ul__item"><a href="#top">TOP</a></li>
-        <li class="header__gnav__ul__item"><a href="#about">ABOUT</a></li>
-        <li class="header__gnav__ul__item"><a href="#skills">SKILLS</a></li>
-        <li class="header__gnav__ul__item"><a href="#portfolio">PORTFOLIO</a></li>
-        <li class="header__gnav__ul__item"><a href="#contact">CONTACT</a></li>
+      <ul class="header__gnav-container">
+        <li class="header__gnav-item"><a href="#top">TOP</a></li>
+        <li class="header__gnav-item"><a href="#about">ABOUT</a></li>
+        <li class="header__gnav-item"><a href="#skill">SKILLS</a></li>
+        <li class="header__gnav-item"><a href="#portfolio">PORTFOLIO</a></li>
+        <li class="header__gnav-item"><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
-    <div class="header__spmenu">
-      <span class="header__spmenu__1"></span>
-      <span class="header__spmenu__2"></span>
-      <span class="header__spmenu__3"></span>
+    <div class="header__menu">
+      <span class="header__menu--1"></span>
+      <span class="header__menu--2"></span>
+      <span class="header__menu--3"></span>
     </div>
     <div class="header__bg"></div>
   </header>
 
-  <main class="cont">
-    <section class="cont__top">
-      <div class="cont__top__words">
-        <h3 class="cont__top__words__catchphrase">I believe <br class="return1">in <br class="return2">what I see.</h3>
-        <div class="cont__top__words__keywords">
-          <h4 class="cont__top__words__keywords__title">my keywords</h4>
-          <p class="cont__top__words__keywords__list text__fz">web : HTML5, CSS3, JavaScript</p>
-          <p class="cont__top__words__keywords__list text__fz">趣味 : 小説や詩歌</p>
-          <p class="cont__top__words__keywords__list text__fz">これから : UI, UX, Vue.js</p>
+  <main class="container">
+
+    <!-- ここからcontainer-top -->
+    <section class="container-top">
+      <div class="container-top__text">
+        <h3 class="container-top__catch">I believe <br class="return1">in <br class="return2">what I see.</h3>
+        <div class="container-top__keyword">
+          <h4 class="container-top__lead">my keywords</h4>
+          <p class="container-top__list text__fz">web : HTML5, CSS3, JavaScript</p>
+          <p class="container-top__list text__fz">趣味 : 小説や詩歌</p>
         </div>
       </div>
-      <div class="cont__top__img"></div>
+      <div class="container-top__img"></div>
     </section>
+    <!-- ここまでcontainer-top -->
 
-    <section class="cont__about" id="about">
+    <!-- ここからcontainer-about -->
+    <section class="container-about" id="about">
 
-      <div class="cont__about__img">
+      <div class="container-about__img">
         <img src="dist/images/port_about.png" alt="夜の木と電灯">
       </div>
-      <div class="cont__about__box">
-        <h2 class="cont__about__box__title">ABOUT</h2>
-        <p class="cont__about__box__description  text__fz">
+      <div class="container-about__content">
+        <h2 class="container-about__title">ABOUT</h2>
+        <p class="container-about__description  text__fz">
           1996年生まれ。<br>
           21年よりフロントエンドエンジニアとしてお仕事を始めた。<br>
           趣味は文学全般で、小説や詩歌が好き。
@@ -68,141 +71,75 @@
       </div>
 
     </section>
+    <!-- ここまでcontainer-about -->
 
-    <section class="cont__skills" id="skills">
+    <!-- ここからcontainer-skill -->
+    <section class="container-skill" id="skill">
 
-      <div class="cont__skills__box">
-        <h2 class="cont__skills__box__title">SKILLS</h2>
+      <div class="container-skill__header">
+        <h2 class="container-skill__title">SKILLS</h2>
       </div>
 
-      <ul class="cont__skills__list">
-        <li class="cont__skills__list__item">
-          <p class="cont__skills__list__item__number  text__fz">01</p>
-          <h3 class="cont__skills__list__item__title">HTML5</h3>
-          <p class="cont__skills__list__item__text text__fz">タグの使い所やCSSの実装し易さを意識したコーディングをしています。クラスは、BEM規則でSASSを書くことを前提に付けています。</p>
+      <ul class="container-skill__body">
+        <li class="container-skill__list">
+          <p class="container-skill__number  text__fz">01</p>
+          <h3 class="container-skill__heading">HTML5</h3>
+          <p class="container-skill__text text__fz">タグの使い所やCSSの実装し易さを意識したコーディングをしています。クラスは、BEM規則でSASSを書くことを前提に付けています。</p>
         </li>
-        <li class="cont__skills__list__item">
-          <p class="cont__skills__list__item__number  text__fz">02</p>
-          <h3 class="cont__skills__list__item__title">CSS3</h3>
-          <p class="cont__skills__list__item__text text__fz">SASS(scss)で書いており、コンパイルはGulp、或いはVScodeの拡張機能を用いています。レスポンシブにも対応可能。</p>
+        <li class="container-skill__list">
+          <p class="container-skill__number  text__fz">02</p>
+          <h3 class="container-skill__heading">CSS3</h3>
+          <p class="container-skill__text text__fz">SASS(scss)で書いており、コンパイルはGulp、或いはVScodeの拡張機能を用いています。レスポンシブにも対応可能。</p>
         </li>
-        <li class="cont__skills__list__item">
-          <p class="cont__skills__list__item__number  text__fz">03</p>
-          <h3 class="cont__skills__list__item__title">JavaScript</h3>
-          <p class="cont__skills__list__item__text text__fz">jQueryやGulp4, Three.js, Barba.js, Swiper.jsの使用経験があります。これからVue.jsに手を出す予定です。 </p>
+        <li class="container-skill__list">
+          <p class="container-skill__number  text__fz">03</p>
+          <h3 class="container-skill__heading">JavaScript</h3>
+          <p class="container-skill__text text__fz">jQueryやGulp4, Three.js, Barba.js, Swiper.jsの使用経験があります。これからVue.jsに手を出す予定です。 </p>
         </li>
-        <li class="cont__skills__list__item">
-          <p class="cont__skills__list__item__number  text__fz">04</p>
-          <h3 class="cont__skills__list__item__title">WordPress</h3>
-          <p class="cont__skills__list__item__text text__fz">0からwebメディアサイト、コーポレートサイトを制作した経験があります。開発環境はxampp。Dockerに興味あり。</p>
+        <li class="container-skill__list">
+          <p class="container-skill__number  text__fz">04</p>
+          <h3 class="container-skill__heading">WordPress</h3>
+          <p class="container-skill__text text__fz">0からwebメディアサイト、コーポレートサイトを制作した経験があります。開発環境はxampp。Dockerに興味あり。</p>
         </li>
-        <li class="cont__skills__list__item">
-          <p class="cont__skills__list__item__number  text__fz">05</p>
-          <h3 class="cont__skills__list__item__title">Photoshop</h3>
-          <p class="cont__skills__list__item__text text__fz">大まかなデザインを考える時や画像加工に使っています。</p>
+        <li class="container-skill__list">
+          <p class="container-skill__number  text__fz">05</p>
+          <h3 class="container-skill__heading">Photoshop</h3>
+          <p class="container-skill__text text__fz">大まかなデザインを考える時や画像加工に使っています。</p>
         </li>
       </ul>
     </section>
+    <!-- ここまでcontainer-skill -->
 
-    <section class="cont__portfolio" id="portfolio">
+    <!-- ここからcontainer-portfolio -->
+    <section class="container-portfolio" id="portfolio">
 
-      <div class="cont__portfolio__box">
-        <h2 class="cont__portfolio__box__title">PORTFOLIO</h2>
-        <p class="cont__portfolio__box__description text__fz">これまでに自主制作してきたものを掲載しています。<br>GitHubは以下より。</p>
-        <a href="https://github.com/ryota-ohashi" class="cont__portfolio__box__github text__fz">https://github.com/ryota-ohashi</a>
+      <div class="container-portfolio__header">
+        <h2 class="container-portfolio__title">PORTFOLIO</h2>
+        <p class="container-portfolio__desc text__fz">これまでに自主制作してきたものを掲載しています。<br>GitHubは以下より。</p>
+        <a href="https://github.com/ryota-ohashi" class="container-portfolio__github text__fz">https://github.com/ryota-ohashi</a>
       </div>
 
-      <ul class="cont__portfolio__list">
-        <li class="cont__portfolio__list__item">
-          <div class="cont__portfolio__list__item__img">
+      <ul class="container-portfolio__body">
+        <li class="container-portfolio__list">
+          <div class="container-portfolio__img">
             <img src="dist/images/new_port.jpg" alt="コーポレートサイトのトップページ">
           </div>
-          <h3 class="cont__portfolio__list__item__title">本サイト</h3>
-          <p class="cont__portfolio__list__item__text text__fz">
+          <h3 class="container-portfolio__heading">本サイト</h3>
+          <p class="container-portfolio__text text__fz">
             改めてポートフォリオサイトを作り直しました。スクロールに応じたアクションを幾つか取り入れてみました。<br>
             HTML5/CSS3/jQuery/Gulp4を用いて制作。<br>
             レスポンシブ対応済み。
           </p>
-          <p class="cont__portfolio__list__item__date">(制作日：2019-12)</p>
-          <a href="https://ryota-ohashi.github.io/" class="cont__portfolio__list__item__button">Click to visit</a>
+          <p class="container-portfolio__date">(制作日：2019-12)</p>
+          <a href="https://ryota-ohashi.github.io/" class="container-portfolio__button">Click to visit</a>
         </li>
-
-        <li class="cont__portfolio__list__item">
-          <div class="cont__portfolio__list__item__img">
-            <img src="dist/images/saishin_port.jpg" alt="コーポレートサイトのトップページ">
-          </div>
-          <h3 class="cont__portfolio__list__item__title">コーポレートサイト(WP)</h3>
-          <p class="cont__portfolio__list__item__text text__fz">
-            WordPressを用いて、0からコーポレートサイトを構築しました。<br>
-            HTML5/CSS3/JavaScript/Swiper.js/WordPressを用いて制作。<br>
-            レスポンシブ対応済み。
-          </p>
-          <p class="cont__portfolio__list__item__date">(制作日：2019-12)</p>
-          <a href="http://saishin.starfree.jp/" class="cont__portfolio__list__item__button">Click to visit</a>
-        </li>
-
-        <li class="cont__portfolio__list__item">
-          <div class="cont__portfolio__list__item__img">
-            <img src="dist/images/whitethings_port.jpg" alt="コーポレートサイトのトップページ">
-          </div>
-          <h3 class="cont__portfolio__list__item__title">White Things</h3>
-          <p class="cont__portfolio__list__item__text text__fz">
-            テンプレートは使わずに0からテーマを作成し、WEBメディアサイトを構築しました。<br>
-            HTML5/CSS3/JavaScript/PHP/WordPressを用いて制作。<br>
-            レスポンシブ対応済み。
-          </p>
-          <p class="cont__portfolio__list__item__date">(制作日：2019-08)</p>
-          <a href="http://whitethings.wp.xdomain.jp/" class="cont__portfolio__list__item__button">Click to visit</a>
-        </li>
-
-        <li class="cont__portfolio__list__item">
-          <div class="cont__portfolio__list__item__img">
-            <img src="dist/images/xxxcorp_port.jpg" alt="コーポレートサイトのトップページ">
-          </div>
-          <h3 class="cont__portfolio__list__item__title">コーポレートサイト</h3>
-          <p class="cont__portfolio__list__item__text text__fz">
-            Barba.jsを試してみたくなり、奥村設計事務所様(http://www.om-s.co.jp/)のサイトデザインを参考にさせて頂きつつ実装しました。<br>
-            HTML5/CSS3/jQuery/Barba.jsを用いて制作。<br>
-            レスポンシブ対応済み。
-          </p>
-          <p class="cont__portfolio__list__item__date">(制作日：2019-07)</p>
-          <a href="xxxcorporate.html" class="cont__portfolio__list__item__button">Click to visit</a>
-        </li>
-
-        <li class="cont__portfolio__list__item">
-          <div class="cont__portfolio__list__item__img">
-            <img src="dist/images/preport_port.jpg" alt="コーポレートサイトのトップページ">
-          </div>
-          <h3 class="cont__portfolio__list__item__title">旧ポートフォリオサイト</h3>
-          <p class="cont__portfolio__list__item__text text__fz">
-            Three.jsを用いてブラックボックスが回るサイトを作りました。「人間はブラックボックスである」というのがコンセプト。<br>
-            HTML5/CSS3/jQuery/Three.jsを用いて制作。<br>
-            レスポンシブ対応済み。
-          </p>
-          <p class="cont__portfolio__list__item__date">(制作日：2019-06)</p>
-          <a href="previous-portfolio.html" class="cont__portfolio__list__item__button">Click to visit</a>
-        </li>
-
-        <li class="cont__portfolio__list__item">
-          <div class="cont__portfolio__list__item__img">
-            <img src="dist/images/magazine_port.jpg" alt="コーポレートサイトのトップページ">
-          </div>
-          <h3 class="cont__portfolio__list__item__title">メディアトップページ</h3>
-          <p class="cont__portfolio__list__item__text text__fz">
-            練習としてTOPページのみ制作<br>
-            HTML5/CSS3/jQueryを用いて制作。<br>
-            レスポンシブ対応済み。
-          </p>
-          <p class="cont__portfolio__list__item__date">(制作日：2019-05)</p>
-          <a href="magazine.html" class="cont__portfolio__list__item__button">Click to visit</a>
-        </li>
-
       </ul>
     </section>
+    <!-- ここまでcontainer-portfolio -->
 
-    <section class="cont__contact" id="contact">
-      <h2 class="cont__contact__title">CONTACT</h2>
-      <p class="cont__contact__detail text__fz">
+    <section class="container-contact" id="contact">
+      <h2 class="container-contact__title">CONTACT</h2>
+      <p class="container-contact__email text__fz">
         E-mail : ryota0084812[at]yahoo.co.jp<br>
       </p>
     </section>

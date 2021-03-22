@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	//spmenu用
-	$('.header__spmenu').click(function(){
+	$('.header__menu').click(function(){
 		$('body').toggleClass('open');
 	});
 
@@ -35,8 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			if ( !$('body').hasClass('open') ) {
 
 				$('.header').css('border', '1px solid #333');
-				$('.header__intro__subtitle').css('display', 'none');
-				$('.header__spmenu').css('top', '9px');
+				$('.header__heading-subtitle').css('display', 'none');
+				$('.header__menu').css('top', '9px');
 				//border1px文を加味して上へ(特にsp用)
 				$('.header').css('top', '-1px');
 				//header__bg用
@@ -54,8 +54,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 				//tab以上の時、headerが動く
 				$('.header').css('border', '1px solid grey');
-				$('.header__intro__subtitle').css('display', 'block');
-				$('.header__spmenu').css('top', '22px');
+				$('.header__heading-subtitle').css('display', 'block');
+				$('.header__menu').css('top', '22px');
 
 				//header__bg用
 				$('.header__bg').css('height', '0%');
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		//背景色変更用
 		let aboutSection = $('#about').offset().top;
-		let skillsSection = $('#skills').offset().top;
+		let skillsSection = $('#skill').offset().top;
 		let portfolioSection = $('#portfolio').offset().top;
 		let contactSection = $('#contact').offset().top;
 

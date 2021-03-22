@@ -97,7 +97,7 @@ body {
 		top: -1px;
 	}
 
-	&__intro {
+	&__heading {
 		position: relative;
 		z-index: 100;
 		letter-spacing: 5px;
@@ -110,33 +110,33 @@ body {
 			padding: 15px 0 15px 20px ;
 		}
 
-		&__title {
-			font-size: 26px;
-			line-height: 1.4;
+	}
+	&__heading-title {
+		font-size: 26px;
+		line-height: 1.4;
 
-			@include lpc {
-				font-size: 16px;
-			}
-			@include pc {
-				font-size: 14px;
-			}
-		}
-
-		//jsでdispley:none制御
-		&__subtitle {
-			padding-top: 20px;
+		@include lpc {
 			font-size: 16px;
-			line-height: 2;
-			transition: .3s ease;
+		}
+		@include pc {
+			font-size: 14px;
+		}
+	}
 
-			@include lpc {
-				font-size: 12px;
-				padding-top: 10px;
-			}
-			@include pc {
-				font-size: 10px;
-				padding-top: 5px;
-			}
+	//jsでdispley:none制御
+	&__heading-subtitle {
+		padding-top: 20px;
+		font-size: 16px;
+		line-height: 2;
+		transition: .3s ease;
+
+		@include lpc {
+			font-size: 12px;
+			padding-top: 10px;
+		}
+		@include pc {
+			font-size: 10px;
+			padding-top: 5px;
 		}
 	}
 
@@ -150,70 +150,68 @@ body {
 			flex: 1;
 			transition: .3s ease;
 		}
+	}
+	&__gnav-container {
+		display: flex;
+		align-items: flex-end;
+		height: 100%;
 
-		&__ul {
-			display: flex;
-			align-items: flex-end;
-			height: 100%;
+		@include tab {
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+	&__gnav-item {
+		position: relative;
+		border-left: 1px solid grey;
+
+		@include tab {
+			border-left: initial;
+			text-align: center;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			width: 0;
+			height: 3px;
+			background-color: white;
+			transition: .3s ease;
 
 			@include tab {
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
+				display: none;
 			}
+		}
 
-			&__item {
-				position: relative;
-				border-left: 1px solid grey;
+		&:hover::after {
+			width: 100%;
+		}
 
-				@include tab {
-					border-left: initial;
-					text-align: center;
-				}
-				
-				&::after {
-					content: "";
-					position: absolute;
-					bottom: -1px;
-					left: 0;
-					width: 0;
-					height: 3px;
-					background-color: white;
-					transition: .3s ease;
+		& a {
+			display: block;
+			padding: 0 50px 20px;
+			font-size: 16px;
+			letter-spacing: 1px;
 
-					@include tab {
-						display: none;
-					}
-				}
-
-				&:hover::after {
-					width: 100%;
-				}
-
-				& a {
-					display: block;
-					padding: 0 50px 20px;
-					font-size: 16px;
-					letter-spacing: 1px;	
-
-					@include lpc {
-						font-size: 14px;
-						padding: 0 20px 10px;
-					}		
-					@include pc {
-						font-size: 12px;
-						padding: 0 15px 5px;
-					}
-					@include tab {
-						font-size: 18px;
-						padding: 15px 0;
-					}
-				}
+			@include lpc {
+				font-size: 14px;
+				padding: 0 20px 10px;
+			}
+			@include pc {
+				font-size: 12px;
+				padding: 0 15px 5px;
+			}
+			@include tab {
+				font-size: 18px;
+				padding: 15px 0;
 			}
 		}
 	}
 
-	&__spmenu {
+	&__menu {
 		display: none;
 
 		//top位置はjsでも制御
@@ -237,16 +235,16 @@ body {
 			width: 40px;
 			height: 3px;
 			background-color: white;
-			
+
 		}
-		&__1 {
+		&--1 {
 			top: calc(50% - 10px);
 			transition: .3s ease;
 		}
-		&__2 {
+		&--2 {
 			top: 50%;
 		}
-		&__3 {
+		&--3 {
 			top: calc(50% + 10px);
 			transition: .3s ease;
 		}
@@ -272,7 +270,7 @@ body {
 	background-color: #333;
 }
 
-.open .header__intro {
+.open .header__heading {
 	border-bottom: 1px solid grey;
 }
 
@@ -282,389 +280,376 @@ body {
 	overflow: hidden;
 }
 
-.open .header__spmenu {
+.open .header__menu {
 	right: 15%;
-	
-	&__1 {
+
+	&--1 {
 		transform: rotate(-45deg);
 	}
-	&__2 {
+	&--2 {
 		visibility: hidden;
 	}
-	&__3 {
+	&--3 {
 		transform: rotate(45deg);
 	}
-	&__1 , &__3{
+	&--1 , &--3{
 		top: 50%;
 	}
 }
+//ここからcontainer-top
+.container-top {
+	height: 100vh;
+	display: flex;
 
-.cont {
-	padding: -50px -10px 0 0;
-
-	&__top {
-		height: 100vh;
-		display: flex;
-
-		&__words {
-			width: 40vw;
-			padding: 50vh 0 0 5vw;
-			font-family: $EngFont;
-			color: white;
-
-			@include sp {
-				padding: 40vh 0 0 5vw;
-			}
-
-			&__catchphrase {
-				font-size: 72px;
-				letter-spacing: 5px;
-				line-height: 1.7;
-				white-space: nowrap;
-				position: relative;
-				z-index: 2;
-
-				@include lpc {
-					font-size: 52px;
-				}	
-				@include pc {
-					font-size: 46px;
-				}
-				@include sp {
-					font-size: 42px;
-				}
-				@include se {
-					font-size: 28px;
-				}
-				@include sprand {
-					font-size: 20px;
-				}
-
-				& .return1 {
-					display: none;
-
-					@include sp {
-						display: block;
-					}
-				}
-				& .return2 {
-					display: none;
-
-					@include tab {
-						display: block;
-					}
-					@include sprand {
-						display: none;
-					}
-				}
-
-			}
-
-			&__keywords {
-				margin-top: 10vh;
-				white-space: nowrap;
-
-				@include tab {
-					position: relative;
-					z-index: 2;
-				}
-
-				
-				&__title {
-					font-size: 24px;
-					letter-spacing: 5px;
-					margin-bottom: 20px;
-
-					@include lpc {
-						font-size: 20px;
-					}		
-					@include pc {
-						font-size: 18px;
-						margin-bottom: 10px;
-					}
-					@include sp {
-						font-size: 14px;
-					}
-					@include sprand {
-						font-size: 14px;
-					}
-				}
-
-				&__list {
-					font-size: 14px;
-					letter-spacing: 2px;
-					font-family: $JapFont;
-
-					@include sp {
-						font-size: 12px;
-						padding-bottom: 10px;
-					}
-					@include sprand {
-						font-size: 10px;
-					}
-				}
-				.resize &__list {
-					font-size: 10px;
-				}
-			}
-		}
-
-		&__img {
-			width: 60vw;
-			height: 100vh;
-			background: left / cover url(/dist/images/port_top.jpg);
-		}
-
-	}
-
-	&__about {
-		display: flex;
-		align-items: flex-end;	
-		padding: 10vh 0;
-
-		@include pc {
-			padding: 100px 0;
-		}
-
-		&__img {
-			width: 40vw;
-			padding-left: 10vw;
-			text-align: right;
-
-			@include pc {
-				padding-left: 5vw;
-			}
-			@include tab {
-				display: none;
-			}
-
-			& img {
-				width: 30vw;
-
-				@include pc {
-					width: 100%;
-				}
-			}
-		}
-		
-		&__box {
-			width: 60vw;
-			padding: 10px 10vw 10px 5vw;
-
-			@include tab {
-				width: 80vw;
-				margin: 0 auto;
-				padding: 0;
-			}
-
-			&__title {
-				font-size: 42px;
-				letter-spacing: 8px;
-				font-family: $EngFont;
-
-				@include lpc {
-					font-size: 28px;
-				}		
-			}
-
-			&__description {
-				border-top: 1px solid #000;
-				padding-top: 25px;
-				margin-top: 25px;
-				letter-spacing: 2px;
-				line-height: 1.7;
-				font-family: $JapFont;
-
-				&__note {
-					color: #555;
-					transition: .3s ease-in-out;
-
-					&:hover {
-						color: white;
-					}
-				}
-			}
-		}
-	}
-
-	&__skills {
-		width: 100vw;
-		padding: 10vh 10vw;
+	&__text {
+		width: 40vw;
+		padding: 50vh 0 0 5vw;
+		font-family: $EngFont;
 		color: white;
-
-		@include pc {
-			padding: 100px 10vw 0;
-		}
-
-		&__box {
-
-			&__title {
-				@extend .cont__about__box__title;
-				padding-bottom: 25px;
-				border-bottom: 1px solid white;
-			}	
-		}
-
-		&__list {
-			padding: 50px 0;
-			display: flex;
-			flex-wrap: wrap;
-
-			&__item {
-				width: 33.3%;
-				padding-bottom: 50px;
-
-				@include tab {
-					width: 100%;
-				}
-
-				&__number {
-					font-family: $EngFont;
-					letter-spacing: 3px;
-				}
-				&__title {
-					font-family: $EngFont;
-					line-height: 2;
-					letter-spacing: 2px;
-					font-size: 36px;
-
-					@include lpc {
-						font-size: 28px;
-					}
-				}
-				&__text {
-					font-family: $JapFont;
-					letter-spacing: 2px;
-					word-break: break-all;
-				}
-				&:nth-child(2), &:nth-child(3), &:nth-child(5) {
-					padding-left: 35px;
-
-					@include tab {
-						padding-left: 0;
-					}
-				}
-			}
-		}
-	}
-
-	&__portfolio {
-		width: 100vw;
-		margin: 0 auto;
-		padding: 50px 10vw 0;
-
-		&__box {
-			margin: 50px 0 100px;
-			transition: .3s ease;
-
-			@include sp {
-				box-shadow: initial;
-				padding: 0;
-				margin: 50px 0 30px;
-			}
-
-			&__title {
-				@extend .cont__about__box__title;
-			}
-			&__description {
-				@extend .cont__about__box__description;
-			}
-			&__github {
-				color: black;
-				letter-spacing: 2px;
-				line-height: 1.7;
-			}
-		}
-
-		&__list {
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
-
-			&__item {
-				width: 45%;
-				text-align: center;
-				letter-spacing: 2px;
-
-				@include tab {
-					width: 100%;
-				}
-
-				&__img {
-					width: 100%;
-
-					& img {
-						width: 100%;
-					}
-				}
-
-				&__title {
-					font-size: 24px;
-					line-height: 3;
-
-					@include lpc {
-						font-size: 20px;
-					}
-					@include pc {
-						font-size: 16px;
-					}
-				}
-			
-				&__text {
-					line-height: 1.7;
-					text-align: left;
-					word-break: break-all;
-				}
-
-				&__date {
-					font-size: 12px;
-					text-align: right;
-				}
-
-				&__button {
-					display: block;
-					font-size: 24px;
-					font-family: $EngFont;
-					margin: 30px 0 100px;
-					padding: 20px 25px;
-					border: 1px solid white;
-					transition: .3s ease;
-
-					@include lpc {
-						font-size: 20px;
-						padding: 10px 15px;
-					}
-
-					&:hover {
-						background-color: #fff;
-						color: black;
-					}
-				}
-			}
-		}
-	}
-
-	&__contact {
-		width: 100vw;
-		color: white;
-		padding: 20vh 10vw;
-		word-break: break-all;
 
 		@include sp {
-			padding: 100px 10vw;
+			padding: 40vh 0 0 5vw;
+		}
+	}
+	&__catch {
+		font-size: 72px;
+		letter-spacing: 5px;
+		line-height: 1.7;
+		white-space: nowrap;
+		position: relative;
+		z-index: 2;
+
+		@include lpc {
+			font-size: 52px;
+		}
+		@include pc {
+			font-size: 46px;
+		}
+		@include sp {
+			font-size: 42px;
+		}
+		@include se {
+			font-size: 28px;
+		}
+		@include sprand {
+			font-size: 20px;
 		}
 
-		&__title {
-			@extend .cont__about__box__title;
+		& .return1 {
+			display: none;
+
+			@include sp {
+				display: block;
+			}
+		}
+		& .return2 {
+			display: none;
+
+			@include tab {
+				display: block;
+			}
+			@include sprand {
+				display: none;
+			}
+		}
+	}
+	&__keyword {
+		margin-top: 10vh;
+		white-space: nowrap;
+
+		@include tab {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&__lead {
+		font-size: 24px;
+		letter-spacing: 5px;
+		margin-bottom: 20px;
+
+		@include lpc {
+			font-size: 20px;
+		}
+		@include pc {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		@include sp {
+			font-size: 14px;
+		}
+		@include sprand {
+			font-size: 14px;
+		}
+	}
+	&__list {
+		font-size: 14px;
+		letter-spacing: 2px;
+		font-family: $JapFont;
+
+		@include sp {
+			font-size: 12px;
+			padding-bottom: 10px;
+		}
+		@include sprand {
+			font-size: 10px;
+		}
+	}
+	&__img {
+		width: 60vw;
+		height: 100vh;
+		background: left / cover url(/dist/images/port_top.jpg);
+	}
+}
+//ここまでcontainer-top
+
+//ここからcontainer-about
+.container-about {
+	display: flex;
+	align-items: flex-end;
+	padding: 10vh 0;
+
+	@include pc {
+		padding: 100px 0;
+	}
+
+	&__img {
+		width: 40vw;
+		padding-left: 10vw;
+		text-align: right;
+
+		@include pc {
+			padding-left: 5vw;
+		}
+		@include tab {
+			display: none;
 		}
 
-		&__detail {
-			@extend .cont__about__box__description;
-			border-color: white;
+		& img {
+			width: 30vw;
+
+			@include pc {
+				width: 100%;
+			}
+		}
+	}
+
+	&__content {
+		width: 60vw;
+		padding: 10px 10vw 10px 5vw;
+
+		@include tab {
+			width: 80vw;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+	}
+	&__title {
+		font-size: 42px;
+		letter-spacing: 8px;
+		font-family: $EngFont;
+
+		@include lpc {
+			font-size: 28px;
+		}
+	}
+
+	&__description {
+		border-top: 1px solid #000;
+		padding-top: 25px;
+		margin-top: 25px;
+		letter-spacing: 2px;
+		line-height: 1.7;
+		font-family: $JapFont;
+	}
+}
+//ここまでcontainer-about
+
+//ここからcontainer-skill
+.container-skill {
+	width: 100vw;
+	padding: 10vh 10vw;
+	color: white;
+
+	@include pc {
+		padding: 100px 10vw 0;
+	}
+
+	&__title {
+		padding-bottom: 25px;
+		border-bottom: 1px solid white;
+		@extend .container-about__title;
+
+
+		@include lpc {
+			font-size: 28px;
+		}
+	}
+
+	&__body {
+		padding: 50px 0;
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+	&__list {
+		width: 33.3%;
+		padding-bottom: 50px;
+
+		@include tab {
+			width: 100%;
+		}
+		&:nth-child(2), &:nth-child(3), &:nth-child(5) {
+			padding-left: 35px;
+
+			@include tab {
+				padding-left: 0;
+			}
+		}
+
+	}
+	&__number {
+		font-family: $EngFont;
+		letter-spacing: 3px;
+	}
+	&__heading {
+		font-family: $EngFont;
+		line-height: 2;
+		letter-spacing: 2px;
+		font-size: 36px;
+
+		@include lpc {
+			font-size: 28px;
+		}
+	}
+	&__text {
+		font-family: $JapFont;
+		letter-spacing: 2px;
+		word-break: break-all;
+	}
+}
+//ここまでcontainer-skill
+
+//ここからcontainer-portfolio
+.container-portfolio {
+	width: 100vw;
+	margin: 0 auto;
+	padding: 50px 10vw 0;
+
+	&__header {
+		margin: 50px 0 100px;
+		transition: .3s ease;
+
+		@include sp {
+			box-shadow: initial;
+			padding: 0;
+			margin: 50px 0 30px;
+		}
+
+	}
+	&__title {
+		@extend .container-about__title;
+	}
+	&__desc {
+		@extend .container-about__description;
+	}
+	&__github {
+		color: black;
+		letter-spacing: 2px;
+		line-height: 1.7;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+	}
+	&__list {
+		width: 45%;
+		text-align: center;
+		letter-spacing: 2px;
+
+		@include tab {
+			width: 100%;
+		}
+	}
+
+	&__img {
+		width: 100%;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__heading {
+		font-size: 24px;
+		line-height: 3;
+
+		@include lpc {
+			font-size: 20px;
+		}
+		@include pc {
+			font-size: 16px;
+		}
+	}
+
+	&__text {
+		line-height: 1.7;
+		text-align: left;
+		word-break: break-all;
+	}
+
+	&__date {
+		font-size: 12px;
+		text-align: right;
+	}
+
+	&__button {
+		display: block;
+		font-size: 24px;
+		font-family: $EngFont;
+		margin: 30px 0 100px;
+		padding: 20px 25px;
+		border: 1px solid white;
+		transition: .3s ease;
+
+		@include lpc {
+			font-size: 20px;
+			padding: 10px 15px;
+		}
+
+		&:hover {
+			background-color: #fff;
+			color: black;
 		}
 	}
 }
+//ここまでcontainer-portfolio
 
+.container {
+	padding: -50px -10px 0 0;
+}
+.container-contact {
+	width: 100vw;
+	color: white;
+	padding: 20vh 10vw;
+	word-break: break-all;
+
+	@include sp {
+		padding: 100px 10vw;
+	}
+
+	&__title {
+		@extend .container-about__title;
+	}
+
+	&__email {
+		@extend .container-about__description;
+		border-color: white;
+	}
+}
 .footer {
 	color: white;
 	text-align: center;
