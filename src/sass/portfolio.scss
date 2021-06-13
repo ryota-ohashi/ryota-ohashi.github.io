@@ -151,7 +151,7 @@ body {
 			transition: .3s ease;
 		}
 	}
-	&__gnav-container {
+	&__gnav-list {
 		display: flex;
 		align-items: flex-end;
 		height: 100%;
@@ -450,9 +450,9 @@ body {
 	}
 
 	&__title {
+		@extend .container-about__title;
 		padding-bottom: 25px;
 		border-bottom: 1px solid white;
-		@extend .container-about__title;
 
 
 		@include lpc {
@@ -600,8 +600,8 @@ body {
 		}
 	}
 }
-//ここまでcontainer-portfolio
 
+//ここまでcontainer-portfolio
 .container {
 	padding: -50px -10px 0 0;
 }

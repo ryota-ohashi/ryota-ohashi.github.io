@@ -11,6 +11,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		return false;
 	});
 
+	// スムーススクロール
+	document.querySelectorAll(a[href^="#"]).click
+
 	//spmenu用
 	$('.header__menu').click(function(){
 		$('body').toggleClass('open');
@@ -82,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		};
 	});
 
+	// トップのスライドショー
 	let counter = 1;
 	let contTopBg = document.querySelector('.container-top__img');
 	const bgImage = [
