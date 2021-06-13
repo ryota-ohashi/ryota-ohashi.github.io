@@ -26,25 +26,25 @@ function imgmin() {
     .pipe(gulp.dest('dist/images'));
 };
 
-//jsファイルを結合して圧縮（Three.jsとjquery.jsのみ）
-function jsCom() {
-  return gulp
-    .src(["src/js/**/three.js", "src/js/**/jquery.js"],{ sourcemaps: false })
-    .pipe(
-      babel({
-        presets: ['@babel/env'],
-      }),
-    )
-    .pipe(plumber())
-    .pipe(concat('all.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest("dist/js"));
-}
+//jsファイルを結合して圧縮
+// function jsCom() {
+//   return gulp
+//     .src(["src/js/**/three.js", "src/js/**/jquery.js"],{ sourcemaps: false })
+//     .pipe(
+//       babel({
+//         presets: ['@babel/env'],
+//       }),
+//     )
+//     .pipe(plumber())
+//     .pipe(concat('all.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest("dist/js"));
+// }
 
 //その他のjsファイルをsrcからdistへ
 function jsMove() {
   return gulp
-    .src(["src/js/**/*.js", "!src/js/**/three.js", "!src/js/**/jquery.js"],{ sourcemaps: false })
+    .src(["src/js/**/*.js"],{ sourcemaps: false })
     .pipe(gulp.dest("dist/js"));
 }
 

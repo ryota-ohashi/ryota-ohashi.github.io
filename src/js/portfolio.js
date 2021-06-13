@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// スムーススクロール
-	document.querySelectorAll(a[href^="#"]).click
+	// document.querySelectorAll(a[href^="#"]).click
 
 	//spmenu用
 	$('.header__menu').click(function(){
