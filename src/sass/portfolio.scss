@@ -39,6 +39,22 @@ $sprand: 420px;//スマホ横向き高さ用
 	}
 }
 
+@font-face {
+	font-family: "MyFont";
+	src: url(/dist/fonts/NotoSansJP-Regular.woff);
+	font-weight: 400;
+}
+.text-noto {
+	font-family: "MyFont";
+	color: #fff;
+	text-align: center;
+}
+.text-not-noto {
+	font-family: sans-serif;
+	color: #fff;
+	text-align: center;
+}
+
 $EngFont: 'Montserrat', "century gothic", "arial light", sans-serif;
 $JapFont: 'Noto Sans JP', sans-serif;
 $Blue: rgb(54, 127, 187);

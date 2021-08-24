@@ -87,14 +87,14 @@ function watchFiles(done) {
     done();
   };
   gulp.watch('src/sass').on('change', gulp.series(sassCom, browserReload));
-  gulp.watch('src/js').on('change', gulp.series(jsCom, jsMove, browserReload));
+  gulp.watch('src/js').on('change', gulp.series(jsMove, browserReload));
   gulp.watch('src/images').on('change', gulp.series(imgmin, browserReload));
   gulp.watch('*.html').on('change', gulp.series(browserReload));
 }
 
-gulp.task('default', gulp.series(gulp.parallel(sassCom, jsCom, jsMove, imgmin), gulp.series(browsersync, watchFiles)));
+gulp.task('default', gulp.series(gulp.parallel(sassCom, jsMove, imgmin), gulp.series(browsersync, watchFiles)));
 
 gulp.task("imgmin", imgmin);
-gulp.task('jsCom', jsCom);
+// gulp.task('jsCom', jsCom);
 gulp.task('jsMove', jsMove);
 gulp.task('sassCom', sassCom);
