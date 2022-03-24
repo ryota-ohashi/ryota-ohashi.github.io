@@ -1,0 +1,59 @@
+// メディアクエリ用
+$lpc: 1440px; //大き目pc
+$pc: 1024px; // PC, iPad Pro
+$tab: 768px; // タブレット
+$sp: 480px; // 6 ~ X
+$se: 340px; //SE
+$sprand: 420px;//スマホ横向き高さ用
+
+@mixin lpc {
+  @media (max-width: ($lpc)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin se {
+  @media (max-width: ($se)) {
+    @content;
+  }
+}
+@mixin sprand {
+	@media (max-height: ($sprand)) {
+		@content;
+	}
+}
+
+// 変数
+$EngFont: 'Montserrat', "century gothic", "arial light", sans-serif;
+$JapFont: sans-serif;
+$Blue: rgb(54, 127, 187);
+$bg : #ebf2f9;
+
+//モジュール
+.m-text {
+	font-size: 18px;
+
+	@include lpc {
+		font-size: 16px;
+	}
+	@include pc {
+		font-size: 14px;
+	}
+	@include tab {
+		font-size: 12px;
+	}
+}
