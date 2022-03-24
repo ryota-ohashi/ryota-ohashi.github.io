@@ -23,7 +23,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'docs'
-  },
-  publicDir: '/ryota-ohashi.github.io/'
+  }
 })
 // @import "@/assets/scss/_destyle.scss";
