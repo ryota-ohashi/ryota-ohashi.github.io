@@ -3,7 +3,8 @@ import { reactive } from 'vue'
 import slide_01 from '@/assets/img/slide_01.jpg'
 import slide_02 from '@/assets/img/slide_02.jpg'
 import slide_03 from '@/assets/img/slide_03.jpg'
-// import slides from '../../assets/img/*.jpg'
+import slide_04 from '@/assets/img/slide_04.jpg'
+import slide_05 from '@/assets/img/slide_05.jpg'
 
 // 画像
 const status = reactive({
@@ -11,7 +12,9 @@ const status = reactive({
   imgPath: [
     slide_01,
     slide_02,
-    slide_03
+    slide_03,
+    slide_04,
+    slide_05
   ]
 });
 
@@ -32,7 +35,6 @@ setInterval(slideShow, 5000);
         <p class="kv__list m-text">趣味 : 小説や詩歌</p>
       </div>
     </div>
-    <!-- <ul ref="bg" class="kv__slide" :style="{ backgroundImage: 'url(' + status.path + ')'}"> -->
     <ul ref="bg" class="kv__slide">
 			<li v-for="(path, index) in status.imgPath" :key="path" :class="{'is-show': index === status.currentNumber}">
 				<img :src="path" alt="">
