@@ -12,11 +12,8 @@ import Top from '@/components/pages/Top.vue'
 
 <style lang="scss">
 @import './assets/scss/_destyle';
-
-#app {
-  font-family: sans-serif;
-}
 body{
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   background-color: #000;
   transition: background-color .3s ease-in-out;
 }

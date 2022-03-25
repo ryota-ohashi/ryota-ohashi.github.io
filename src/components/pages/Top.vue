@@ -26,12 +26,12 @@ const doWhenIntersect = (entries) => {
 
 const body = document.body;
 const toggleClass = (el) => {
-	el.classList.contains('black') ? body.classList.add('bg-change') : body.classList.remove('bg-change');
+	el.classList.contains('font-black') ? body.classList.add('bg-white') : body.classList.remove('bg-white');
 }
 
 onMounted(() => {
 	const observer = new IntersectionObserver(doWhenIntersect, options);
-	const targets = document.querySelectorAll('.js-observe-target');
+	const targets = document.querySelectorAll('.js-observe-section');
 	targets.forEach(el => {
 		observer.observe(el);
 	});
@@ -41,8 +41,8 @@ onMounted(() => {
 
 <template>
   <main class="cont">
-		<Kv class="js-observe-target"></Kv>
-		<Section class="section js-observe-target" id="about" title="ABOUT" color="black">
+		<Kv class="js-observe-section"></Kv>
+		<Section class="section js-observe-section" id="about" title="ABOUT" color="black">
 			<template v-slot:content>
 				<Desc>
 					1996年生まれ。<br>
@@ -54,7 +54,7 @@ onMounted(() => {
 				</Desc>
 			</template>
 		</Section>
-		<Section class="section js-observe-target" id="skills" title="SKILLS" color="white">
+		<Section class="section js-observe-section" id="skills" title="SKILLS" color="white">
 			<template v-slot:content>
 				<SkillList>
 					<Skill>
@@ -85,7 +85,7 @@ onMounted(() => {
 				</SkillList>
 			</template>
 		</Section>
-		<Section class="section js-observe-target" id="works" title="WORKS" color="black">
+		<Section class="section js-observe-section" id="works" title="WORKS" color="black">
 			<template v-slot:content>
 				<Desc>
 					これまでに自主制作してきたものを掲載しています。<br>GitHub：
@@ -104,7 +104,6 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-
 .section{
 	width: 100%;
   padding: 10vh 10%;
@@ -112,7 +111,7 @@ onMounted(() => {
 		padding: 5vh 10%;
 	}
 }
-.bg-change{
+.bg-white{
 	background-color: #ccc;
 }
 </style>

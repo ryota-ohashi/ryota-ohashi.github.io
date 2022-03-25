@@ -63,7 +63,6 @@ const scrollTo = (e) => {
 	border: 1px solid grey;
 	transition: .3s ease-out;
 	z-index: 99;
-
 	@include tab {
 		flex-direction: column;
 		justify-content: initial;
@@ -75,19 +74,17 @@ const scrollTo = (e) => {
 		z-index: 100;
 		letter-spacing: 5px;
 		padding: 20px 0 20px 60px;
-
 		@include lpc {
 			padding: 10px 0 10px 30px ;
 		}
 		@include tab {
 			padding: 15px 0 15px 20px ;
 		}
-
 	}
+
 	&__heading-title {
 		font-size: 26px;
 		line-height: 1.4;
-
 		@include lpc {
 			font-size: 16px;
 		}
@@ -96,13 +93,11 @@ const scrollTo = (e) => {
 		}
 	}
 
-	//jsでdispley:none制御
 	&__heading-subtitle {
 		padding-top: 20px;
 		font-size: 16px;
 		line-height: 2;
 		transition: .3s ease;
-
 		@include lpc {
 			font-size: 12px;
 			padding-top: 10px;
@@ -116,7 +111,6 @@ const scrollTo = (e) => {
 	&__gnav {
 		position: relative;
 		z-index: 100;
-
 		@include tab {
 			display: none;
 			opacity: 0;
@@ -128,7 +122,6 @@ const scrollTo = (e) => {
 		display: flex;
 		align-items: flex-end;
 		height: 100%;
-
 		@include tab {
 			align-items: center;
 			justify-content: center;
@@ -138,7 +131,6 @@ const scrollTo = (e) => {
 	&__gnav-item {
 		position: relative;
 		border-left: 1px solid grey;
-
 		@include tab {
 			border-left: initial;
 			text-align: center;
@@ -153,7 +145,6 @@ const scrollTo = (e) => {
 			height: 3px;
 			background-color: white;
 			transition: .3s ease;
-
 			@include tab {
 				display: none;
 			}
@@ -168,7 +159,6 @@ const scrollTo = (e) => {
 			padding: 0 50px 20px;
 			font-size: 16px;
 			letter-spacing: 1px;
-
 			@include lpc {
 				font-size: 14px;
 				padding: 0 20px 10px;
@@ -186,8 +176,6 @@ const scrollTo = (e) => {
 
 	&__menu {
 		display: none;
-
-		//top位置はjsでも制御
 		@include tab {
 			display: block;
 			position: absolute;
@@ -248,20 +236,16 @@ const scrollTo = (e) => {
 	border: 1px solid #333;
 	background-color: #333;
 }
-
 .open .header__heading {
 	border-bottom: 1px solid grey;
 }
-
 .open .header__gnav {
 	display: block;
 	opacity: 1;
 	overflow: hidden;
 }
-
 .open .header__menu {
 	right: 15%;
-
 	&--1 {
 		transform: rotate(-45deg);
 	}

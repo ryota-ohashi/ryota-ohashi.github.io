@@ -3,37 +3,36 @@
 
 <template>
   <li class="skill-item">
-    <p class="order">
+    <p class="skill-item__order">
       <slot name="order"></slot>
     </p>
-    <p class="hdg">
+    <p class="skill-item__hdg">
       <slot name="hdg"></slot>
     </p>
-    <p class="text">
+    <p class="skill-item__text">
       <slot name="text"></slot>
     </p>
   </li>
 </template>
 
 <style lang="scss">
-
-  .order{
+.skill-item{
+  &__order{
     font-family: $EngFont;
-		letter-spacing: 3px;
+    letter-spacing: 3px;
   }
-  .hdg{
+  &__hdg{
     font-family: $EngFont;
-		line-height: 2;
-		letter-spacing: 2px;
-		font-size: 36px;
-
-		@include lpc {
-			font-size: 28px;
-		}
+    line-height: 2;
+    letter-spacing: 2px;
+    font-size: 36px;
+    @include lpc {
+      font-size: 28px;
+    }
   }
-  .text{
-		font-family: $JapFont;
-		letter-spacing: 2px;
-		word-break: break-all;
+  &__text{
+    letter-spacing: 2px;
+    word-break: break-all;
   }
+}
 </style>

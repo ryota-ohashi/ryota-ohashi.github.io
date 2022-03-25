@@ -43,18 +43,15 @@ setInterval(slideShow, 5000);
   </section>
 </template>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
 .kv {
 	height: 100vh;
 	display: flex;
-
 	&__text {
 		width: 40vw;
 		padding: 50vh 0 0 5vw;
 		font-family: $EngFont;
 		color: white;
-
 		@include sp {
 			padding: 40vh 0 0 5vw;
 		}
@@ -66,7 +63,6 @@ setInterval(slideShow, 5000);
 		white-space: nowrap;
 		position: relative;
 		z-index: 2;
-
 		@include lpc {
 			font-size: 52px;
 		}
@@ -85,14 +81,12 @@ setInterval(slideShow, 5000);
 
 		& .return1 {
 			display: none;
-
 			@include sp {
 				display: block;
 			}
 		}
 		& .return2 {
 			display: none;
-
 			@include tab {
 				display: block;
 			}
@@ -104,17 +98,11 @@ setInterval(slideShow, 5000);
 	&__keyword {
 		margin-top: 10vh;
 		white-space: nowrap;
-
-		@include tab {
-			position: relative;
-			z-index: 2;
-		}
 	}
 	&__lead {
 		font-size: 24px;
 		letter-spacing: 5px;
 		margin-bottom: 20px;
-
 		@include lpc {
 			font-size: 20px;
 		}
@@ -132,8 +120,6 @@ setInterval(slideShow, 5000);
 	&__list {
 		font-size: 14px;
 		letter-spacing: 2px;
-		font-family: $JapFont;
-
 		@include sp {
 			font-size: 12px;
 			padding-bottom: 10px;

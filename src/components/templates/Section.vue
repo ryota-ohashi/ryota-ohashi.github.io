@@ -1,11 +1,13 @@
 <script setup>
+import { ref } from 'vue'
 import H2title from '@/components/atoms/H2title.vue'
 
 const { title, color } = defineProps(['title','color']);
+const bbColor = ref("font-" + color);
 </script>
 
 <template>
-  <section :class="color">
+  <section :class="bbColor">
     <H2title
       :title="title"
       :color="color"
@@ -17,10 +19,10 @@ const { title, color } = defineProps(['title','color']);
 </template>
 
 <style lang="scss">
-.black{
+.font-black{
   color: #000;
 }
-.white{
+.font-white{
   color: #fff;
 }
 </style>

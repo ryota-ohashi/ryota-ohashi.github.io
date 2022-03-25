@@ -17,30 +17,29 @@ const { path } = defineProps(['path']);
 </template>
 
 <style lang="scss">
-  .work-item{
-    &__img{
-      width: 100%;
+.work-item{
+  &__img{
+    width: 100%;
+  }
+  &__title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0;
+    @include lpc {
+      font-size: 20px;
     }
-    &__title{
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      padding: 10px 0;
-
-      @include lpc {
-        font-size: 20px;
-      }
-      @include pc {
-        font-size: 16px;
-      }
-    }
-    &__desc{
-      line-height: 1.7;
-		  word-break: break-all;
-    }
-    &__date{
-      font-size: 12px;
-      text-align: right;
+    @include pc {
+      font-size: 16px;
     }
   }
+  &__desc{
+    line-height: 1.7;
+    word-break: break-all;
+  }
+  &__date{
+    font-size: 12px;
+    text-align: right;
+  }
+}
 </style>

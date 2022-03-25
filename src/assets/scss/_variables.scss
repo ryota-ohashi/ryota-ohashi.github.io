@@ -39,14 +39,12 @@ $sprand: 420px;//スマホ横向き高さ用
 
 // 変数
 $EngFont: 'Montserrat', "century gothic", "arial light", sans-serif;
-$JapFont: sans-serif;
 $Blue: rgb(54, 127, 187);
 $bg : #ebf2f9;
 
 //モジュール
 .m-text {
 	font-size: 18px;
-
 	@include lpc {
 		font-size: 16px;
 	}
