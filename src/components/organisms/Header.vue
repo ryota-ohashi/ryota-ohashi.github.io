@@ -33,7 +33,7 @@ const scrollTo = (e) => {
   <header class="header js-observe-header" :class="{'fixed-top': flag}">
     <div class="header__heading">
       <h1 class="header__heading-title">PORTFOLIO BY<br>RYOTA OHASHI</h1>
-      <h2 class="header__heading-subtitle">WEB ENGINEER</h2>
+      <h2 class="header__heading-subtitle">FRONTEND ENGINEER</h2>
     </div>
     <nav class="header__gnav">
       <ul class="header__gnav-list">
