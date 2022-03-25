@@ -6,7 +6,7 @@ import Top from '@/components/pages/Top.vue'
 
 <template>
   <Header/>
-  <Top/>
+  <router-view></router-view>
   <Footer/>
 </template>
 

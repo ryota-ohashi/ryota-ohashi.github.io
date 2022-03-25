@@ -41,6 +41,7 @@ const scrollTo = (e) => {
         <li class="header__gnav-item"><a href="#about" @click.prevent="scrollTo($event)">ABOUT</a></li>
         <li class="header__gnav-item"><a href="#skills" @click.prevent="scrollTo($event)">SKILLS</a></li>
         <li class="header__gnav-item"><a href="#works" @click.prevent="scrollTo($event)">WORKS</a></li>
+        <li class="header__gnav-item"><router-link to="/other">OTHER</router-link></li>
       </ul>
     </nav>
     <button class="header__menu" @click="toggleMenu">
