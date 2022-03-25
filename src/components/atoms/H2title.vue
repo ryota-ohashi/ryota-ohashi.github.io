@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 const { title, color } = defineProps(['title', 'color']);
-const colorClass = ref("bb-" + color);
+const bbColor = ref("bb-" + color);
 </script>
 <template>
-  <h2 class="hdg2" :class="colorClass">{{ title }}</h2>
+  <h2 class="hdg2" :class="bbColor">{{ title }}</h2>
 </template>
 
 <style lang="scss">

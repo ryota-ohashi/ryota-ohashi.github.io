@@ -3,11 +3,11 @@ import { ref } from 'vue'
 import H2title from '@/components/atoms/H2title.vue'
 
 const { title, color } = defineProps(['title','color']);
-const bbColor = ref("font-" + color);
+const fontColor = ref("font-" + color);
 </script>
 
 <template>
-  <section :class="bbColor">
+  <section :class="fontColor">
     <H2title
       :title="title"
       :color="color"
