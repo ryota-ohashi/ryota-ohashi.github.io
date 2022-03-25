@@ -24,6 +24,7 @@ const scrollTo = (e) => {
 		top: position,
 		behavior: 'smooth'
 	});
+	toggleMenu();
 }
 </script>
 <template>
