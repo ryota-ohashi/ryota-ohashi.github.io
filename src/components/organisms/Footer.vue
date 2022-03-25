@@ -1,11 +1,11 @@
 <template>
-  <footer>
+  <footer class="footer">
     <p>copyright 2021 RYOTA OHASHI</p>
   </footer>
 </template>
 
 <style lang="scss">
-footer {
+.footer {
 	color: black;
 	text-align: center;
 	font-family: $EngFont;

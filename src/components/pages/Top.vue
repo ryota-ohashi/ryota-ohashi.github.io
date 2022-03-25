@@ -40,7 +40,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="cont">
+  <main>
 		<Kv class="js-observe-section"></Kv>
 		<Section class="section js-observe-section" id="about" title="ABOUT" color="black">
 			<template v-slot:content>
