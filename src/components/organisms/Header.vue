@@ -15,16 +15,18 @@ const toggleMenu = () => {
 }
 
 // スムーススクロール
+const offset = 100;
+
 const scrollTo = (e) => {
 	let id = e.target.getAttribute('href');
 	if (id === "#") id = "html";
 	const scrollTarget = document.querySelector(id);
-	const position = scrollTarget.getBoundingClientRect().top + window.pageYOffset - 100;
+	const position = scrollTarget.getBoundingClientRect().top + window.pageYOffset - offset;
 	window.scrollTo({
 		top: position,
 		behavior: 'smooth'
 	});
-	toggleMenu();
+	if (window.matchMedia('(max-width: 768px)').matches) toggleMenu();
 }
 </script>
 <template>
