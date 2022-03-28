@@ -98,6 +98,10 @@ setInterval(slideShow, 5000);
 	&__keyword {
 		margin-top: 10vh;
 		white-space: nowrap;
+		@include tab {
+			position: relative;
+			z-index: 2;
+		}
 	}
 	&__lead {
 		font-size: 24px;
