@@ -1,7 +1,6 @@
 <script setup>
-import Header from '@/components/organisms/Header.vue'
-import Footer from '@/components/organisms/Footer.vue'
-import Top from '@/components/pages/Top.vue'
+import Header from '@/components/globals/Header.vue'
+import Footer from '@/components/globals/Footer.vue'
 </script>
 
 <template>
