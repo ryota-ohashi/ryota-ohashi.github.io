@@ -1,5 +1,5 @@
 <script setup>
-const { path } = defineProps(['path']);
+const { path, url } = defineProps(['path', 'url']);
 </script>
 <template>
   <li class="work-item">
@@ -13,6 +13,9 @@ const { path } = defineProps(['path']);
     <p class="work-item__date">
       <slot name="date"></slot>
     </p>
+    <router-link class="work-item__link" :to="url">
+      <slot name="link-text"></slot>
+    </router-link>
   </li>
 </template>
 
@@ -40,6 +43,20 @@ const { path } = defineProps(['path']);
   &__date{
     font-size: 12px;
     text-align: right;
+  }
+  &__link{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+    &:hover{
+      background-color: #000;
+      color: #fff;
+    }
   }
 }
 </style>

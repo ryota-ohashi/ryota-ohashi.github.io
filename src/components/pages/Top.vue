@@ -7,7 +7,9 @@ import SkillList from '@/components/molecules/SkillList.vue'
 import Skill from '@/components/atoms/Skill.vue'
 import WorkList from '@/components/molecules/WorkList.vue'
 import Work from '@/components/atoms/Work.vue'
-import work_01 from '@/assets/img/work_01.jpg'
+import work_01_img from '@/assets/img/work_01.jpg'
+
+const InteraUrl = "/intera/";
 
 // 背景色の変更機能
 const options = {
@@ -46,11 +48,13 @@ onMounted(() => {
 			<H2title color="black">ABOUT</H2title>
 			<Desc>
 				1996年生まれ。<br>
+				出身は新潟県。<br><br>
 				2021年よりフロントエンドエンジニアとしてお仕事を始めた。<br>
-				主にWEBサイトの構築等をしている。<br>
-				趣味は文学全般で、小説や詩歌が好き。<br><br>
-				最近は、Vueに触れたりしている。<br>
-				アクセシビリティやハイパフォーマンスチューニング辺りにも興味。
+				主にサイトの構築、運用をしている。<br><br>
+				趣味は言語表現全般で、短歌、川柳、俳句、詩、小説、どれも好き。<br>
+				短歌と川柳は自分でも作ったりする。<br><br>
+				会社の勉強会で作成している遊び作品はWORKSセクションにて掲載中。<br>
+				このサイトも昔作ったものを突っ込んだだけなので、どこかで改修したい。
 			</Desc>
 		</section>
 
@@ -60,27 +64,32 @@ onMounted(() => {
 				<Skill>
 					<template v-slot:order>01</template>
 					<template v-slot:hdg>HTML</template>
-					<template v-slot:text>クラスの命名規則は基本的にはBEMです。</template>
+					<template v-slot:text>セマンティックな構造を意識したコーディング。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>02</template>
 					<template v-slot:hdg>CSS</template>
-					<template v-slot:text>SCSS記法で書いております。レスポンシブも対応可能。</template>
+					<template v-slot:text>記法はBEMが好き。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>03</template>
 					<template v-slot:hdg>JavaScript</template>
-					<template v-slot:text>WEBサイト構築に必要な基礎知識はあり。</template>
+					<template v-slot:text>WEBサイト構築に必要な知識あり。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>04</template>
-					<template v-slot:hdg>PhotoShop</template>
-					<template v-slot:text>コーディングのために必要な情報を取得できる。</template>
+					<template v-slot:hdg>Type Script</template>
+					<template v-slot:text>勉強中。jsモジュールをクラスで分割して書く時に必要な型定義はできる程度。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>05</template>
-					<template v-slot:hdg>XD</template>
-					<template v-slot:text>コーディングのために必要な情報を取得できる。</template>
+					<template v-slot:hdg>Vue</template>
+					<template v-slot:text>本サイトの作成に使用。おおまかな仕組みは理解しつつも、コンポネ設計に悩み。</template>
+				</Skill>
+				<Skill>
+					<template v-slot:order>05</template>
+					<template v-slot:hdg>XD, Photoshop</template>
+					<template v-slot:text>コーディングに必要な知識はあり。Figmaも使ってみたい。</template>
 				</Skill>
 			</SkillList>
 		</section>
@@ -88,14 +97,14 @@ onMounted(() => {
 		<section class="section section--fz-black js-observe-section" id="works">
 			<H2title color="black">WORKS</H2title>
 			<Desc>
-				これまでに自主制作してきたものを掲載しています。<br>GitHub：
+				GitHub：
 				<a href="https://github.com/ryota-ohashi">https://github.com/ryota-ohashi</a>
 			</Desc>
 			<WorkList>
-				<Work :path="work_01">
-					<template v-slot:title>本サイト</template>
-					<template v-slot:desc>Vueで書き換えました。<br>今回はViteを使って速さを体感しつつの構築。</template>
-					<template v-slot:date>（制作日：2022-03）</template>
+				<Work :path="work_01_img" :url="InteraUrl">
+					<template v-slot:title>インタラ会</template>
+					<template v-slot:desc>インタラ会と称して、各回決められたお題に対して小作品を見せ合っている会。</template>
+					<template v-slot:link-text>Intera Works</template>
 				</Work>
 			</WorkList>
 		</section>

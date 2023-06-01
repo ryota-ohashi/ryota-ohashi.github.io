@@ -11,23 +11,11 @@ window.addEventListener('scroll', toggleClass);
 
 const body = document.body;
 const toggleMenu = () => {
-	body.classList.toggle('open');
+	if (window.innerWidth <= 768) {
+		body.classList.toggle('open');
+	}
 }
 
-// スムーススクロール
-const offset = 100;
-
-const scrollTo = (e) => {
-	let id = e.target.getAttribute('href');
-	if (id === "#") id = "html";
-	const scrollTarget = document.querySelector(id);
-	const position = scrollTarget.getBoundingClientRect().top + window.pageYOffset - offset;
-	window.scrollTo({
-		top: position,
-		behavior: 'smooth'
-	});
-	if (window.matchMedia('(max-width: 768px)').matches) toggleMenu();
-}
 </script>
 <template>
   <header class="header js-observe-header" :class="{'fixed-top': flag}">
@@ -37,11 +25,8 @@ const scrollTo = (e) => {
     </div>
     <nav class="header__gnav">
       <ul class="header__gnav-list">
-        <li class="header__gnav-item"><a href="#" @click.prevent="scrollTo($event)">TOP</a></li>
-        <li class="header__gnav-item"><a href="#about" @click.prevent="scrollTo($event)">ABOUT</a></li>
-        <li class="header__gnav-item"><a href="#skills" @click.prevent="scrollTo($event)">SKILLS</a></li>
-        <li class="header__gnav-item"><a href="#works" @click.prevent="scrollTo($event)">WORKS</a></li>
-        <li class="header__gnav-item"><router-link to="/other">OTHER</router-link></li>
+        <li class="header__gnav-item"><router-link to="/" @click="toggleMenu">TOP</router-link></li>
+        <li class="header__gnav-item"><router-link to="/intera/" @click="toggleMenu">Intera Works</router-link></li>
       </ul>
     </nav>
     <button class="header__menu" @click="toggleMenu">
@@ -65,7 +50,7 @@ const scrollTo = (e) => {
 	font-family: $EngFont;
 	color: white;
 	border: 1px solid grey;
-	transition: .3s ease-out;
+	transition: top .3s ease-out;
 	z-index: 99;
 	@include tab {
 		flex-direction: column;
@@ -184,12 +169,11 @@ const scrollTo = (e) => {
 			display: block;
 			position: absolute;
 			top: 22px;
-			right: 10%;
+			right: 30px;
 			width: 50px;
 			height: 50px;
 			flex: 1;
 			z-index: 102;
-			transition: .3s ease-in-out;
 		}
 
 		& span {
@@ -233,34 +217,36 @@ const scrollTo = (e) => {
 }
 
 // spmenuクリックでbodyにclass="open"付与
-.open .header {
-	width: 100vw;
-	height: calc(100vh + 1px);
-	padding: 0 5%;
-	border: 1px solid #333;
-	background-color: #333;
-}
-.open .header__heading {
-	border-bottom: 1px solid grey;
-}
-.open .header__gnav {
-	display: block;
-	opacity: 1;
-	overflow: hidden;
-}
-.open .header__menu {
-	right: 15%;
-	&--1 {
-		transform: rotate(-45deg);
-	}
-	&--2 {
-		visibility: hidden;
-	}
-	&--3 {
-		transform: rotate(45deg);
-	}
-	&--1 , &--3{
-		top: 50%;
+.open {
+	.header {
+		width: 100vw;
+		height: calc(100vh + 1px);
+		padding: 0 5%;
+		border: 1px solid #333;
+		background-color: #333;
+		&__heading {
+			border-bottom: 1px solid grey;
+		}
+		&__gnav {
+			display: block;
+			opacity: 1;
+			overflow: hidden;
+		}
+		&__menu {
+			right: calc(30px + 5vw);
+			&--1 {
+				transform: rotate(-45deg);
+			}
+			&--2 {
+				visibility: hidden;
+			}
+			&--3 {
+				transform: rotate(45deg);
+			}
+			&--1 , &--3{
+				top: 50%;
+			}
+		}
 	}
 }
 </style>

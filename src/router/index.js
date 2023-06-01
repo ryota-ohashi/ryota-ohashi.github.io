@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
-import Other from "@/views/Other.vue";
+import Intera from "@/views/Intera.vue";
 
 const routes = [
   {
@@ -9,9 +9,9 @@ const routes = [
     component: Home,
   },
   {
-    path: "/other",
-    name: "Other",
-    component: Other,
+    path: "/intera",
+    name: "Intera",
+    component: Intera,
   },
 ];
 const router = createRouter({
