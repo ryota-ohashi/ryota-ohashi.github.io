@@ -61,6 +61,11 @@ const interaList = [
     url: "/practice-intera12/",
     theme: "ふわふわ"
   },
+  {
+    name: "intera13",
+    url: "/practice-intera13/",
+    theme: "くるくる"
+  },
 ]
 
 </script>
