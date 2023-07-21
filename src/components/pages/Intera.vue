@@ -49,7 +49,7 @@ const interaList = [
   {
     name: "intera10",
     url: "/practice-intera10/",
-    theme: ""
+    theme: "マスク"
   },
   {
     name: "intera11",
@@ -65,6 +65,11 @@ const interaList = [
     name: "intera13",
     url: "/practice-intera13/",
     theme: "くるくる"
+  },
+  {
+    name: "intera14",
+    url: "/practice-intera14/",
+    theme: "フィルター"
   },
 ]
 
