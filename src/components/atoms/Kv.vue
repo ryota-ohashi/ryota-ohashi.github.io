@@ -31,7 +31,7 @@ setInterval(slideShow, 5000);
       <h3 class="kv__catch">I believe <br class="return1">in <br class="return2">what I see.</h3>
       <div class="kv__keyword">
         <h4 class="kv__lead">my keywords</h4>
-        <p class="kv__list m-text">web : HTML5, CSS3, JavaScript</p>
+        <p class="kv__list m-text">web : HTML, CSS, JavaScript</p>
         <p class="kv__list m-text">趣味 : 詩歌や小説</p>
       </div>
     </div>

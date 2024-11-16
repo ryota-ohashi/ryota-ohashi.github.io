@@ -8,8 +8,10 @@ import Skill from '@/components/atoms/Skill.vue'
 import WorkList from '@/components/molecules/WorkList.vue'
 import Work from '@/components/atoms/Work.vue'
 import work_01_img from '@/assets/img/work_01.jpg'
+import work_02_img from '@/assets/img/work_02.jpg'
 
 const InteraUrl = "/intera/";
+const ryotakobashiUrl = "http://ryota_kobashi.gitlab.io/profile/";
 
 // 背景色の変更機能
 const options = {
@@ -49,12 +51,13 @@ onMounted(() => {
 			<Desc>
 				1996年生まれ。<br>
 				出身は新潟県。<br><br>
-				2021年よりフロントエンドエンジニアとしてお仕事を始めた。<br>
-				主にサイトの構築、運用をしている。<br><br>
+				2021年4月から2024年4月までフロントエンドエンジニアとしてIT会社に勤務した。<br>
+				今後はフリーランスとして活動予定。<br>
+				主にウェブサイトの構築から運用保守の業務を経験しており、この辺りの領域が好み。<br><br>
 				趣味は言語表現全般で、短歌、川柳、俳句、詩、小説、どれも好き。<br>
 				短歌と川柳は自分でも作ったりする。<br><br>
-				会社の勉強会で作成している作品はWORKSセクションにて掲載中。<br>
-				このサイトも昔作ったものを突っ込んだだけなので、どこかで改修したいと思っているが、、。
+				友人との勉強会の中で作成している小作品はIntera Worksに掲載中。<br>
+
 			</Desc>
 		</section>
 
@@ -64,32 +67,32 @@ onMounted(() => {
 				<Skill>
 					<template v-slot:order>01</template>
 					<template v-slot:hdg>HTML</template>
-					<template v-slot:text>セマンティックな構造を意識したコーディング。</template>
+					<template v-slot:text>テンプレートエンジンとしてはnunjucksが好き。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>02</template>
 					<template v-slot:hdg>CSS</template>
-					<template v-slot:text>記法はBEMが好き。</template>
+					<template v-slot:text>scssで書いており、記法はBEMとFLOCSSを組み合わせたものが好き。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>03</template>
 					<template v-slot:hdg>JavaScript</template>
-					<template v-slot:text>WEBサイト構築に必要な知識あり。</template>
+					<template v-slot:text>WEBサイト構築全般を経験しており、アニメーション周りへの関心も高い。UXを損なうほどのアニメーションは好まないけれど、注意を軽く引く程度のものは好き。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>04</template>
 					<template v-slot:hdg>Type Script</template>
-					<template v-slot:text>勉強中。jsモジュールをクラスで分割して書く時に必要な型定義はできる程度。</template>
+					<template v-slot:text>勉強中。業務でも経験しある程度の型定義はできるが、あまりにも奥が深いと感じる。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>05</template>
-					<template v-slot:hdg>Vue</template>
-					<template v-slot:text>本サイトの作成に使用。おおまかな仕組みは理解しつつも、コンポネ設計に悩み。</template>
+					<template v-slot:hdg>Framework</template>
+					<template v-slot:text>本サイトの作成にはVueを使用。最近では11tyがウェブ制作にはちょうどいいのではないかと感じており、11tyを用いた環境テンプレートを作っている。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>05</template>
-					<template v-slot:hdg>XD, Photoshop</template>
-					<template v-slot:text>コーディングに必要な知識はあり。Figmaも使ってみたい。</template>
+					<template v-slot:hdg>Design Tool</template>
+					<template v-slot:text>XD, Photoshop, Figmaの経験があり、コーディングに必要な操作には慣れている。</template>
 				</Skill>
 			</SkillList>
 		</section>
@@ -105,6 +108,11 @@ onMounted(() => {
 					<template v-slot:title>インタラ会</template>
 					<template v-slot:desc>インタラ会と称して、各回決められたお題に対して小作品を見せ合っている会。</template>
 					<template v-slot:link-text>Intera Works</template>
+				</Work>
+				<Work :path="work_02_img" :url="ryotakobashiUrl">
+					<template v-slot:title>詩歌系個人サイト</template>
+					<template v-slot:desc>詩歌周りでの活動記録を載せています。自己紹介用のサイトです。</template>
+					<template v-slot:link-text>見てみる</template>
 				</Work>
 			</WorkList>
 		</section>

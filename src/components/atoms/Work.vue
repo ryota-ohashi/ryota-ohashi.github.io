@@ -1,5 +1,9 @@
 <script setup>
 const { path, url } = defineProps(['path', 'url']);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0 });
+}
 </script>
 <template>
   <li class="work-item">
@@ -13,7 +17,10 @@ const { path, url } = defineProps(['path', 'url']);
     <p class="work-item__date">
       <slot name="date"></slot>
     </p>
-    <router-link class="work-item__link" :to="url">
+    <a v-if="url.startsWith('http')" class="work-item__link" :href="url" target="_blank">
+      <slot name="link-text"></slot>
+    </a>
+    <router-link v-else class="work-item__link" :to="url" @click="scrollToTop">
       <slot name="link-text"></slot>
     </router-link>
   </li>

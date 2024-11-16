@@ -16,6 +16,11 @@ const toggleMenu = () => {
 	}
 }
 
+// リンクをクリックしたら、画面トップまでスクロール
+const scrollToTop = () => {
+  window.scrollTo({ top: 0 });
+}
+
 </script>
 <template>
   <header class="header js-observe-header" :class="{'fixed-top': flag}">
@@ -25,8 +30,12 @@ const toggleMenu = () => {
     </div>
     <nav class="header__gnav">
       <ul class="header__gnav-list">
-        <li class="header__gnav-item"><router-link to="/" @click="toggleMenu">TOP</router-link></li>
-        <li class="header__gnav-item"><router-link to="/intera/" @click="toggleMenu">Intera Works</router-link></li>
+        <li class="header__gnav-item">
+          <router-link to="/" @click="() => { toggleMenu(); scrollToTop(); }">TOP</router-link>
+        </li>
+        <li class="header__gnav-item">
+          <router-link to="/intera/" @click="() => { toggleMenu(); scrollToTop(); }">Intera Works</router-link>
+        </li>
       </ul>
     </nav>
     <button class="header__menu" @click="toggleMenu">
