@@ -9,9 +9,14 @@ import WorkList from '@/components/molecules/WorkList.vue'
 import Work from '@/components/atoms/Work.vue'
 import work_01_img from '@/assets/img/work_01.jpg'
 import work_02_img from '@/assets/img/work_02.jpg'
+import work_03_img from '@/assets/img/work_03.jpg'
+import work_04_img from '@/assets/img/work_04.jpg'
+
 
 const InteraUrl = "/intera/";
 const ryotakobashiUrl = "http://ryota_kobashi.gitlab.io/profile/";
+const githubEleventyTemplate = "https://github.com/ryota-ohashi/eleventy-template/";
+const githubEleventyViteTemplate = "https://github.com/ryota-ohashi/eleventy-vite-template/";
 
 // 背景色の変更機能
 const options = {
@@ -107,11 +112,21 @@ onMounted(() => {
 				<Work :path="work_01_img" :url="InteraUrl">
 					<template v-slot:title>インタラ会</template>
 					<template v-slot:desc>インタラ会と称して、各回決められたお題に対して小作品を見せ合っている会。</template>
-					<template v-slot:link-text>Intera Works</template>
+					<template v-slot:link-text>見てみる</template>
 				</Work>
 				<Work :path="work_02_img" :url="ryotakobashiUrl">
 					<template v-slot:title>詩歌系個人サイト</template>
 					<template v-slot:desc>詩歌周りでの活動記録を載せています。自己紹介用のサイトです。</template>
+					<template v-slot:link-text>見てみる</template>
+				</Work>
+				<Work :path="work_03_img" :url="githubEleventyTemplate">
+					<template v-slot:title>eleventy環境のテンプレート</template>
+					<template v-slot:desc>eleventyのテンプレートを作成しています。</template>
+					<template v-slot:link-text>見てみる</template>
+				</Work>
+				<Work :path="work_04_img" :url="githubEleventyViteTemplate">
+					<template v-slot:title>eleventy × vite環境のテンプレート</template>
+					<template v-slot:desc>eleventyとviteを用いたテンプレートを作成しています。</template>
 					<template v-slot:link-text>見てみる</template>
 				</Work>
 			</WorkList>
