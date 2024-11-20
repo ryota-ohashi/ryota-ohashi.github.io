@@ -30,6 +30,11 @@ const scrollToTop = () => {
 .work-item{
   &__img{
     width: 100%;
+    height: 335px;
+    object-fit: cover;
+    @include pc {
+      height: 250px;
+    }
   }
   &__title{
     text-align: center;
