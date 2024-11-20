@@ -18,7 +18,7 @@ import work_06_img from '@/assets/img/work_06.jpg'
 const InteraUrl = "/intera/";
 const githubEleventyTemplate = "https://github.com/ryota-ohashi/eleventy-template/";
 const githubEleventyViteTemplate = "https://github.com/ryota-ohashi/eleventy-vite-template/";
-const githubBarbaTemplate = "https://github.com/ryota-ohashi/barba-template/";
+const githubBarbaTemplate = "https://ryota-ohashi.github.io/barba-template/";
 const githubModuleTemplate = "https://ryota-ohashi.github.io/module-template/";
 const ryotakobashiUrl = "http://ryota_kobashi.gitlab.io/profile/";
 
