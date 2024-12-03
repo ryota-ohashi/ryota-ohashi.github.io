@@ -32,7 +32,7 @@ setInterval(slideShow, 5000);
       <div class="kv__keyword">
         <h4 class="kv__lead">my keywords</h4>
         <p class="kv__list m-text">web : HTML, CSS, JavaScript</p>
-        <p class="kv__list m-text">趣味 : 詩歌や小説</p>
+        <p class="kv__list m-text">趣味 : 詩歌など文学全般</p>
       </div>
     </div>
     <ul ref="bg" class="kv__slide">

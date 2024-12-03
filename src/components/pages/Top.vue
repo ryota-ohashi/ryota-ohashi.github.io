@@ -58,15 +58,13 @@ onMounted(() => {
 		<section class="section section--fz-black js-observe-section" id="about">
 			<H2title color="black">ABOUT</H2title>
 			<Desc>
-				1996年生まれ。<br>
-				出身は新潟県。<br><br>
-				2021年4月から2024年4月までフロントエンドエンジニアとしてIT会社に勤務した。<br>
-				今後はフリーランスとして活動予定。<br>
-				主にウェブサイトの構築から運用保守の業務を経験しており、この辺りの領域が好み。<br><br>
-				趣味は言語表現全般で、短歌、川柳、俳句、詩、小説、どれも好き。<br>
-				短歌と川柳は自分でも作ったりする。<br><br>
-				友人との勉強会の中で作成している小作品はIntera Worksに掲載中。<br>
-
+				1996年新潟県生まれ。<br>
+				2021年4月から2024年4月までフロントエンドエンジニアとして、IT会社であるアクセンチュア株式会社に新卒で勤務した。<br>
+				主にウェブサイトの構築から運用保守の業務を経験しており、ウェブサイト制作に関しては広く知識を得ています。またこれまでの運用経験から堅牢な運用やマルチタスクな作業かつ全体スケジュールを意識して仕事をこなしていくことには慣れており、個人的に得意分野です。<br>
+				チーム開発においてはエンジニアとしての自分の仕事に集中することはもちろんですが、デザイナーやディレクターなどの動きまで把握することで、全体感を意識しながら手戻りなく、効率良く進めていくことに注力しています。<br><br>
+				友人との勉強会の中で作成していた小作品はIntera Worksに掲載中。<br>
+				趣味は詩歌などの文学全般。<br>
+				直近では詩歌用の<a class="underline hover" :href="ryotakobashiUrl" target="_blank">個人サイト</a>を作成しており、非同期遷移にアニメーションを取り入れつつ、背景ではp5.jsを用いたピクセルソーティング風の描画を行なった。
 			</Desc>
 		</section>
 
@@ -75,13 +73,13 @@ onMounted(() => {
 			<SkillList>
 				<Skill>
 					<template v-slot:order>01</template>
-					<template v-slot:hdg>HTML</template>
-					<template v-slot:text>テンプレートエンジンとしてはnunjucksが好き。</template>
+					<template v-slot:hdg>HTML系</template>
+					<template v-slot:text>最近はテンプレートエンジンとしてnunjucksをよく使っている。セマンティックなHTMLになるよう心がけています。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>02</template>
-					<template v-slot:hdg>CSS</template>
-					<template v-slot:text>scssで書いており、記法はBEMとFLOCSSを組み合わせたものが好き。</template>
+					<template v-slot:hdg>CSS系</template>
+					<template v-slot:text>記法はBEMとFLOCSSを組み合わせたものが好み。cssモジュールの作成も経験済みで、開発において見やすい設計にすることに注力。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>03</template>
@@ -91,17 +89,22 @@ onMounted(() => {
 				<Skill>
 					<template v-slot:order>04</template>
 					<template v-slot:hdg>Type Script</template>
-					<template v-slot:text>勉強中。業務でも経験しある程度の型定義はできるが、あまりにも奥が深いと感じる。</template>
+					<template v-slot:text>勉強中。業務でも経験し、ある程度の型定義はできるが、あまりにも奥が深いと感じている。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>05</template>
 					<template v-slot:hdg>Framework</template>
-					<template v-slot:text>本サイトの作成にはVueを使用。最近では11tyがウェブ制作にはちょうどいいのではないかと感じており、11tyを用いた環境テンプレートを作っている。</template>
+					<template v-slot:text>本サイトの作成にはVueを使用しています。最近では11tyがウェブ制作にはちょうどいいのではないかと感じており、11tyを用いた環境テンプレートを作った。</template>
 				</Skill>
 				<Skill>
-					<template v-slot:order>05</template>
+					<template v-slot:order>06</template>
+					<template v-slot:hdg>Git</template>
+					<template v-slot:text>業務では連絡ツールも兼ねてBacklogを多く使用しており、コミットコメントをチケットに残せるのがかなり便利に感じています。GitHubやGitLabも勿論使用可能です。</template>
+				</Skill>
+				<Skill>
+					<template v-slot:order>07</template>
 					<template v-slot:hdg>Design Tool</template>
-					<template v-slot:text>XD, Photoshop, Figmaの経験があり、コーディングに必要な操作には慣れている。</template>
+					<template v-slot:text>XD, Photoshop, Figmaの経験があり、コーディングに必要な操作は習得している。</template>
 				</Skill>
 			</SkillList>
 		</section>
@@ -164,5 +167,14 @@ onMounted(() => {
 }
 .bg-white{
 	background-color: #ccc;
+}
+.underline{
+	text-decoration: underline;
+}
+.hover{
+	transition: 0.3s ease;
+	&:hover{
+		opacity: 0.5;
+	}
 }
 </style>
