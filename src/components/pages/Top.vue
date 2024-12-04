@@ -119,32 +119,32 @@ onMounted(() => {
 				<Work :path="work_01_img" :url="InteraUrl">
 					<template v-slot:title>インタラ会</template>
 					<template v-slot:desc>インタラ会と称して、各回決められたお題に対して小作品を見せ合っている会。</template>
-					<template v-slot:link-text>見てみる</template>
+					<template v-slot:link-text>一覧を見てみる</template>
 				</Work>
 				<Work :path="work_02_img" :url="githubEleventyTemplate">
 					<template v-slot:title>eleventy環境のテンプレート</template>
 					<template v-slot:desc>eleventyのテンプレートを作成しています。</template>
-					<template v-slot:link-text>見てみる</template>
+					<template v-slot:link-text>ソースを見てみる</template>
 				</Work>
 				<Work :path="work_03_img" :url="githubEleventyViteTemplate">
 					<template v-slot:title>eleventy × vite環境のテンプレート</template>
 					<template v-slot:desc>eleventyとviteを用いたテンプレートを作成しています。</template>
-					<template v-slot:link-text>見てみる</template>
+					<template v-slot:link-text>ソースを見てみる</template>
 				</Work>
 				<Work :path="work_04_img" :url="githubBarbaTemplate">
 					<template v-slot:title>barba環境のテンプレート</template>
 					<template v-slot:desc>barbaを用いたテンプレートを作成しています。</template>
-					<template v-slot:link-text>見てみる</template>
+					<template v-slot:link-text>ソースを見てみる</template>
 				</Work>
 				<Work :path="work_05_img" :url="githubModuleTemplate">
 					<template v-slot:title>moduleのテンプレート</template>
 					<template v-slot:desc>ウェブ制作でよく用いるJSのmoduleテンプレートを作成しています。</template>
-					<template v-slot:link-text>見てみる</template>
+					<template v-slot:link-text>ソースを見てみる</template>
 				</Work>
 				<Work :path="work_06_img" :url="ryotakobashiUrl">
 					<template v-slot:title>詩歌系個人サイト</template>
-					<template v-slot:desc>詩歌周りでの活動記録を載せています。自己紹介用のサイトです。</template>
-					<template v-slot:link-text>見てみる</template>
+					<template v-slot:desc>詩歌周りでの活動記録を載せています。自己紹介用のサイトです。<br>こちらはgitlabにてページを公開しているので、ソースは<a class="underline hover" href="https://gitlab.com/ryota_kobashi/profile/" target="_blank">gitlab</a>にて公開しています。（筆名のアカウント名ですが私です。）</template>
+					<template v-slot:link-text>サイトを見てみる</template>
 				</Work>
 			</WorkList>
 		</section>
