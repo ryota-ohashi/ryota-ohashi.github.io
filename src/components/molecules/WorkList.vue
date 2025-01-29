@@ -10,7 +10,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px 40px;
   padding: 25px 0;
-  @include sp{
+  @include pc{
     grid-template-columns: 1fr;
   }
 }

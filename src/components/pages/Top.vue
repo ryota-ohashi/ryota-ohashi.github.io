@@ -13,6 +13,7 @@ import work_03_img from '@/assets/img/work_03.jpg'
 import work_04_img from '@/assets/img/work_04.jpg'
 import work_05_img from '@/assets/img/work_05.jpg'
 import work_06_img from '@/assets/img/work_06.jpg'
+import work_07_img from '@/assets/img/work_07.jpg'
 
 
 const InteraUrl = "/intera/";
@@ -21,6 +22,7 @@ const githubEleventyViteTemplate = "https://github.com/ryota-ohashi/eleventy-vit
 const githubBarbaTemplate = "https://ryota-ohashi.github.io/barba-template/";
 const githubModuleTemplate = "https://ryota-ohashi.github.io/module-template/";
 const ryotakobashiUrl = "http://ryota_kobashi.gitlab.io/profile/";
+const playisnotdefinedUrl = "https://playisnotdefined.jp/";
 
 // 背景色の変更機能
 const options = {
@@ -73,12 +75,12 @@ onMounted(() => {
 			<SkillList>
 				<Skill>
 					<template v-slot:order>01</template>
-					<template v-slot:hdg>HTML系</template>
+					<template v-slot:hdg>HTML</template>
 					<template v-slot:text>最近はテンプレートエンジンとしてnunjucksをよく使っている。セマンティックなHTMLになるよう心がけています。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>02</template>
-					<template v-slot:hdg>CSS系</template>
+					<template v-slot:hdg>CSS</template>
 					<template v-slot:text>記法はBEMとFLOCSSを組み合わせたものが好み。cssモジュールの作成も経験済みで、開発において見やすい設計にすることに注力。</template>
 				</Skill>
 				<Skill>
@@ -94,7 +96,7 @@ onMounted(() => {
 				<Skill>
 					<template v-slot:order>05</template>
 					<template v-slot:hdg>Framework</template>
-					<template v-slot:text>本サイトの作成にはVueを使用しています。最近では11tyがウェブ制作にはちょうどいいのではないかと感じており、11tyを用いた環境テンプレートを作った。</template>
+					<template v-slot:text>本サイトの作成にはVueを使用しています。最近では11tyがウェブ制作にはちょうどいいのではないかと感じており、11tyを用いた環境テンプレートを作った。また、Nuxt.jsとmicroCMSのjamstackでSSG構成のメディアサイトを作成しました。</template>
 				</Skill>
 				<Skill>
 					<template v-slot:order>06</template>
@@ -144,6 +146,11 @@ onMounted(() => {
 				<Work :path="work_06_img" :url="ryotakobashiUrl">
 					<template v-slot:title>詩歌系個人サイト</template>
 					<template v-slot:desc>詩歌周りでの活動記録を載せています。自己紹介用のサイトです。<br>こちらはgitlabにてページを公開しているので、ソースは<a class="underline hover" href="https://gitlab.com/ryota_kobashi/profile/" target="_blank">gitlab</a>にて公開しています。（筆名のアカウント名ですが私です。）</template>
+					<template v-slot:link-text>サイトを見てみる</template>
+				</Work>
+				<Work :path="work_07_img" :url="playisnotdefinedUrl">
+					<template v-slot:title>個人メディアサイト</template>
+					<template v-slot:desc>"遊び"をつくり、"遊び"に向かうためのメディアをコンセプトに様々な分野の本を扱う予定のサイトです。</template>
 					<template v-slot:link-text>サイトを見てみる</template>
 				</Work>
 			</WorkList>

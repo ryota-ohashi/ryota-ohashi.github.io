@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>copyright 2024 RYOTA OHASHI</p>
+    <p>copyright 2025 RYOTA OHASHI</p>
   </footer>
 </template>
 

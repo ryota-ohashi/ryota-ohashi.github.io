@@ -33,7 +33,7 @@ const scrollToTop = () => {
     height: 335px;
     object-fit: cover;
     @include pc {
-      height: 250px;
+      height: auto;
     }
   }
   &__title{
