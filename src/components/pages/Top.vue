@@ -66,7 +66,7 @@ onMounted(() => {
 				チーム開発においてはエンジニアとしての自分の仕事に集中することはもちろんですが、デザイナーやディレクターなどの動きまで把握することで、全体感を意識しながら手戻りなく、効率良く進めていくことに注力しています。<br><br>
 				友人との勉強会の中で作成していた小作品はIntera Worksに掲載中。<br>
 				趣味は詩歌などの文学全般。<br>
-				直近では詩歌用の<a class="underline hover" :href="ryotakobashiUrl" target="_blank">個人サイト</a>を作成しており、非同期遷移にアニメーションを取り入れつつ、背景ではp5.jsを用いたピクセルソーティング風の描画を行なった。
+				直近では詩歌用の<a class="underline hover" :href="ryotakobashiUrl" target="_blank">個人サイト</a>を作成したり、読んだ本の感想を書く<a class="underline hover" :href="playisnotdefinedUrl" target="_blank">個人メディアサイト</a>を作成しています。
 			</Desc>
 		</section>
 
