@@ -1,5 +1,3 @@
-# Portfolio
-
 ## 環境
 - Node.js v16以上
 - Vue 3
